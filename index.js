@@ -1,1 +1,1 @@
-require("./scss/cnblog.scss");
+require("./src/scss/cnblog.scss");

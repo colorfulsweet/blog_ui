@@ -12,7 +12,7 @@ module.exports = {
     loaders: [
       { test: /\.css$/, loaders: ["style-loader","css-loader"]},
       //sass-loader?outputStyle=compact
-      { test: /\.scss$/, loaders : ExtractTextPlugin.extract({fallback:"style-loader",use:["css-loader","postcss-loader","sass-loader?outputStyle=expanded"]})}
+      { test: /\.scss$/, loaders : ExtractTextPlugin.extract({fallback:"style-loader",use:["css-loader","postcss-loader","sass-loader?outputStyle=compact"]})}
     ]
   },
   plugins : [
@@ -23,6 +23,6 @@ module.exports = {
       }
     }),
   //写入的文件
-    new ExtractTextPlugin("css/[name].css")
+    new ExtractTextPlugin("css/cnblog.css")
   ]
 };

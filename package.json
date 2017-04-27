@@ -1,0 +1,21 @@
+{
+  "name": "blog_ui",
+  "version": "1.0.0",
+  "description": "博客园UI设计",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --progress"
+  },
+  "author": "Sookie",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.2",
+    "postcss-loader": "^1.3.3",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.4.1"
+  }
+}

@@ -1,4 +1,5 @@
 $nav_height : 48px;
+$base_color : #FF6666;
 
 /* base */
 body {
@@ -20,7 +21,7 @@ image {
 a {
   text-decoration: none;
 }
-
+/* 滚动条 */
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -32,14 +33,14 @@ a {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 0;
-    background-color: #018ee8;
+    background-color: $base_color;
     &:hover {
-      background-color: #6fabec;
+      background-color: lighten($base_color, 10%);
     }
     &:active {
       height: 50px;
       border-radius: 2px;
-      background-color: #033367;
+      background-color: darken($base_color, 10%);
     }
 }
 
@@ -58,8 +59,8 @@ a {
       -webkit-transition: opacity .5s ease;
       transition: opacity .5s ease;
       text-align: center;
-      color: #fff;
-      background: url(http://images2015.cnblogs.com/blog/459873/201601/459873-20160127210900473-1080897398.png) no-repeat;
+
+      background-color: $base_color;
       opacity: .6;
       filter: alpha(opacity=60);
       &:hover {
@@ -78,7 +79,7 @@ a {
 
 ::selection {
     color: #fff;
-    background: #d73030;
+    background: #FFCC99;
 }
 
 
@@ -170,7 +171,7 @@ a {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
-    background: #55895b;
+    background: $base_color;
     height: $nav_height;
     .blogStats {
       //博客状态
@@ -185,7 +186,7 @@ a {
         float: left;
         margin: 0;
         &:hover {
-          background: #6da47d;
+          background: lighten($base_color, 10%);
         }
         a {
           display: -moz-inline-box;
@@ -334,11 +335,11 @@ a {
     padding: 1px;
     border: none;
     border-radius: 4px;
-    background: #55895b
+    background: $base_color;
 }
 
 .btn_my_zzk:hover {
-    background: #6da47d
+    background: lighten($base_color, 10%) ;
 }
 
 #div_digg {
@@ -351,7 +352,7 @@ a {
     width: 125px;
     margin: 10px 0 0;
     padding: 5px;
-    border: 3px solid #55895b;
+    border: 3px solid $base_color;
     border-radius: 5px
 }
 
@@ -368,12 +369,12 @@ a {
 .comment_btn {
     font-size: 18px;
     position: relative;
-    background: #55895b
+    background: $base_color;
 }
 
 #commentform_title, .feedback_area_title {
     font-weight: 700;
-    border-bottom: solid 6px #55895b
+    border-bottom: solid 6px $base_color;
 }
 
 #btn_comment_submit:hover {
@@ -383,7 +384,7 @@ a {
 .feedback_area_title {
     font-size: 24px;
     padding: 10px;
-    color: #55895b
+    color: $base_color
 }
 
 .feedbackListSubtitle {
@@ -399,7 +400,7 @@ a {
     font-size: 24px;
     margin-bottom: 10px;
     padding: 10px 20px 10px 10px;
-    color: #55895b;
+    color: $base_color;
     background-image: none;
     background-repeat: no-repeat
 }
@@ -447,8 +448,8 @@ a {
     font-size: 14px;
     margin: 20px;
     padding: 12px;
-    color: #ddd;
-    background: #55895b
+    color: #eee;
+    background: $base_color
 }
 
 .First, .demo {
@@ -459,7 +460,7 @@ a {
     padding: 5px;
     border: 1px solid #eee;
     border-left-width: 5px;
-    border-left-color: #55895b;
+    border-left-color: $base_color;
     border-radius: 3px;
     background-color: #fff
 }
@@ -471,7 +472,7 @@ a {
     color: #fff;
     border: none;
     border-radius: 4px;
-    background: #6da47d
+    background: #6da47d;
 }
 
 code {
@@ -533,7 +534,7 @@ kbd {
 
 .First {
     font-size: 20px;
-    background: #55895b
+    background: $base_color
 }
 
 .Second {
@@ -580,7 +581,7 @@ div#blog-comments-placeholder a:hover, div#comment_form a:hover, div#profile_blo
     text-decoration: none;
     color: #fff;
     border-radius: 3px;
-    background-color: #55895b
+    background-color: $base_color
 }
 
 a, a:hover, a:visited {
@@ -602,12 +603,12 @@ h3 {
 
 .postBody a:hover {
     color: #fff;
-    background-color: #55895b
+    background-color: $base_color
 }
 
 .postBody a {
     padding: 1px 3px;
-    color: #55895b
+    color: $base_color
 }
 
 #cnblogs_post_body img {
@@ -628,10 +629,10 @@ h3 {
 }
 
 #blogCalendar a u {
-    color: #55895B;
+    color: $base_color;
     display: inline-block;
     padding: 0 7px;
-    border: 1px solid #55895B;
+    border: 1px solid $base_color;
     text-decoration: none;
     margin-top: 2px;
 }

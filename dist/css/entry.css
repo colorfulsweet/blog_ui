@@ -24,6 +24,7 @@ a {
   text-decoration: none;
 }
 
+/* 滚动条 */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -35,17 +36,17 @@ a {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 0;
-  background-color: #018ee8;
+  background-color: #FF6666;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #6fabec;
+  background-color: #ff9999;
 }
 
 ::-webkit-scrollbar-thumb:active {
   height: 50px;
   border-radius: 2px;
-  background-color: #033367;
+  background-color: #ff3333;
 }
 
 /* 返回顶部 按钮 */
@@ -63,8 +64,7 @@ a {
   width: 54px;
   transition: opacity .5s ease;
   text-align: center;
-  color: #fff;
-  background: url(http://images2015.cnblogs.com/blog/459873/201601/459873-20160127210900473-1080897398.png) no-repeat;
+  background-color: #FF6666;
   opacity: .6;
   filter: alpha(opacity=60);
 }
@@ -83,12 +83,12 @@ a {
 
 ::-moz-selection {
   color: #fff;
-  background: #d73030;
+  background: #FFCC99;
 }
 
 ::selection {
   color: #fff;
-  background: #d73030;
+  background: #FFCC99;
 }
 
 .clearfix {
@@ -178,7 +178,7 @@ a {
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
-  background: #55895b;
+  background: #FF6666;
   height: 48px;
 }
 
@@ -196,7 +196,7 @@ a {
 }
 
 #navigator #navList li:hover {
-  background: #6da47d;
+  background: #ff9999;
 }
 
 #navigator #navList li a {
@@ -344,11 +344,11 @@ a {
   padding: 1px;
   border: none;
   border-radius: 4px;
-  background: #55895b;
+  background: #FF6666;
 }
 
 .btn_my_zzk:hover {
-  background: #6da47d;
+  background: #ff9999;
 }
 
 #div_digg {
@@ -361,7 +361,7 @@ a {
   width: 125px;
   margin: 10px 0 0;
   padding: 5px;
-  border: 3px solid #55895b;
+  border: 3px solid #FF6666;
   border-radius: 5px;
 }
 
@@ -378,12 +378,12 @@ a {
 .comment_btn {
   font-size: 18px;
   position: relative;
-  background: #55895b;
+  background: #FF6666;
 }
 
 #commentform_title, .feedback_area_title {
   font-weight: 700;
-  border-bottom: solid 6px #55895b;
+  border-bottom: solid 6px #FF6666;
 }
 
 #btn_comment_submit:hover {
@@ -393,7 +393,7 @@ a {
 .feedback_area_title {
   font-size: 24px;
   padding: 10px;
-  color: #55895b;
+  color: #FF6666;
 }
 
 .feedbackListSubtitle {
@@ -409,7 +409,7 @@ a {
   font-size: 24px;
   margin-bottom: 10px;
   padding: 10px 20px 10px 10px;
-  color: #55895b;
+  color: #FF6666;
   background-image: none;
   background-repeat: no-repeat;
 }
@@ -456,8 +456,8 @@ a {
   font-size: 14px;
   margin: 20px;
   padding: 12px;
-  color: #ddd;
-  background: #55895b;
+  color: #eee;
+  background: #FF6666;
 }
 
 .First, .demo {
@@ -468,7 +468,7 @@ a {
   padding: 5px;
   border: 1px solid #eee;
   border-left-width: 5px;
-  border-left-color: #55895b;
+  border-left-color: #FF6666;
   border-radius: 3px;
   background-color: #fff;
 }
@@ -541,7 +541,7 @@ kbd {
 
 .First {
   font-size: 20px;
-  background: #55895b;
+  background: #FF6666;
 }
 
 .Second {
@@ -588,7 +588,7 @@ div#blog-comments-placeholder a:hover, div#comment_form a:hover, div#profile_blo
   text-decoration: none;
   color: #fff;
   border-radius: 3px;
-  background-color: #55895b;
+  background-color: #FF6666;
 }
 
 a, a:hover, a:visited {
@@ -610,12 +610,12 @@ h3 {
 
 .postBody a:hover {
   color: #fff;
-  background-color: #55895b;
+  background-color: #FF6666;
 }
 
 .postBody a {
   padding: 1px 3px;
-  color: #55895b;
+  color: #FF6666;
 }
 
 #cnblogs_post_body img {
@@ -636,10 +636,10 @@ h3 {
 }
 
 #blogCalendar a u {
-  color: #55895B;
+  color: #FF6666;
   display: inline-block;
   padding: 0 7px;
-  border: 1px solid #55895B;
+  border: 1px solid #FF6666;
   text-decoration: none;
   margin-top: 2px;
 }

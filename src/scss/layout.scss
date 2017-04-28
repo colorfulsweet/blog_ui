@@ -1,0 +1,96 @@
+/* 整体布局结构 */
+#home {
+  overflow: auto;
+  position: relative;
+  width: 95%;
+  max-width: 960px;
+  margin: 30px auto 5px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px -4px #4E4E4E;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+#header {
+  background: url("../images/header.jpeg") no-repeat;
+  background-size: contain;
+  background-position: right;
+  #blogTitle {
+    $icon_size : 100px;
+    $icon_border_width : 1px;
+    padding: 16px 16px 0 16px;
+    .title {
+      //主标题
+      font-size: 36px;
+      height: ($icon_size + $icon_border_width * 2);
+      display:flex;
+      align-items:center;
+      &::before {
+        //头像
+        border: $icon_border_width solid $base_color;
+        content: "";
+        height: $icon_size;
+        width: $icon_size;
+        display: inline-block;
+        border-radius: ($icon_size/2);
+        background: url("../images/portrait.png") no-repeat;
+        background-size: contain;
+      }
+    }
+    .subtitle {
+      //副标题
+      font-size: 14px;
+      font-weight: 400;
+      margin: 10px 0;
+      padding-left: 105px;
+      color: #999;
+    }
+  }
+}
+#main {
+  padding:0 10px;
+  display: flex;
+  flex-direction : row-reverse;
+  justify-content:center;
+  > #mainContent {
+    // 主要内容区域, 显示文章标题和摘要
+    flex-grow:1;
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: scroll;
+    > .forFlow {
+        margin: 0 15px;
+    }
+  }
+  > #sideBar {
+    // 侧边栏区域
+    min-width: 200px;
+    border: 1px dashed #bec7c2;
+    overflow: hidden;
+    padding: 0 8px 40px 12px;
+    h3 {
+      margin: 16px 0 0 -8px;
+      font-size: 14px;
+    }
+    #sideBarMain {
+      font-size: 12px;
+      line-height: 22px;
+      width: 190px;
+      margin: 0;
+      padding: 0 10px 0 0;
+      background: #fff
+    }
+  }
+}
+/* 页脚 */
+#footer {
+  font-size: 14px;
+  margin-top: 20px;
+  padding: 12px;
+  color: #eee;
+  background: $base_color;
+}

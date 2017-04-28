@@ -1,0 +1,42 @@
+/* 导航条 */
+#navigator {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  background: $base_color;
+  height: $nav_height;
+  box-shadow: 0 -1px 12px -4px #000;
+  .blogStats {
+    //博客状态 随笔 文章 评论 - 数量
+    color: #000;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: rgba(255,255,255,0.7);
+    padding: 5px;
+    border-radius: 5px;
+  }
+  #navList {
+    li {
+      line-height: $nav_height;
+      display: inline-block;
+      float: left;
+      margin: 0;
+      -webkit-transition: background .5s ease;
+      transition: background .5s ease;
+      &:hover {
+        background: lighten($base_color, 10%);
+      }
+      a {
+        font-size: 16px;
+        display: -moz-inline-box;
+        display: inline-block;
+        padding: 0 30px;
+        border: 0;
+        line-height: $nav_height;
+        color: #fff;
+      }
+    }
+  }
+}

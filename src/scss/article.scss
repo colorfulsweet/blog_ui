@@ -47,13 +47,14 @@
 	}
 	//提交评论 按钮
 	#btn_comment_submit, .comment_btn {
-			font-size: 18px;
-			color : #fff;
-	    position: relative;
-	    background: $base_color;
-	    width: 120px;
-	    height: 36px;
-	    border: none;
-			@extend %box_gradual;
+		cursor: pointer;
+		font-size: 18px;
+		color : #fff;
+    position: relative;
+    background: $base_color;
+    width: 120px;
+    height: 36px;
+    border: none;
+		@extend %box_gradual;
 	}
 }

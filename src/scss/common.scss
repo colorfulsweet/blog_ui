@@ -1,11 +1,14 @@
 $base_color : #FF6666; //页面主题基准色
+$dark_gray : #dedede; //深灰色
+$light_gray : #f0f0f0; //浅灰色
+
 $fonts : ('Microsoft Yahei', Helvetica, Arial);
 
 %a_gradual {
   //超链接指向时文字颜色渐变动画
   a {
-    -webkit-transition: color .5s ease;
-    transition: color .5s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
     &:hover {
       color :$base_color;
     }
@@ -25,4 +28,13 @@ $fonts : ('Microsoft Yahei', Helvetica, Arial);
   -webkit-border-radius : $radius;
   -moz-border-radius : $radius;
   border-radius: $radius;
+}
+//从上到下的渐变色
+@mixin gradual_change($top_color, $bottom_color) {
+  background-image: -webkit-linear-gradient(top, $top_color 0, $bottom_color 100%);
+  background-image: -o-linear-gradient(top, $top_color 0, $bottom_color 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from($top_color), to($bottom_color));
+  background-image: linear-gradient(to bottom, $top_color 0, $bottom_color 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }

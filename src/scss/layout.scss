@@ -51,7 +51,6 @@
   }
 }
 #main {
-  padding:0 10px;
   display: flex;
   flex-direction : row-reverse;
   justify-content:center;
@@ -71,11 +70,11 @@
   > #sideBar {
     // 侧边栏区域
     min-width: 200px;
-    border: 1px dashed #bec7c2;
+    // border: 1px dashed #bec7c2;
     overflow: hidden;
     padding: 0 8px 40px 12px;
     h3 {
-      margin: 16px 0 0 -8px;
+      margin-top: 16px;
       font-size: 14px;
     }
     #sideBarMain {
@@ -84,7 +83,38 @@
       width: 190px;
       margin: 0;
       padding: 0 10px 0 0;
-      background: #fff
+      background: #fff;
+      .newsItem > #blog-news, #calendar {
+        background-color: $dark_gray;
+      }
+      #calendar {
+        border : $base_color dotted 1px;
+        #blogCalendar a u {
+          color: $base_color;
+          display: inline-block;
+          text-decoration: underline;
+        }
+      }
+      .catListTitle {
+          padding: 5px;
+          text-align: center;
+          @include gradual_change($base_color, lighten($base_color, 15%));
+          @include border_radius(3px);
+      }
+      ul > li {
+        text-align: center;
+        line-height:30px;
+        > a {
+          display: block;
+          background-color: $dark_gray;
+          -webkit-transition: all .5s ease;
+          transition: all .5s ease;
+          &:hover {
+            background-color: $light_gray;
+            font-size: 14px;
+          }
+        }
+      }
     }
   }
 

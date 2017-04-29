@@ -1,0 +1,152 @@
+/*
+* 这个文件里的样式暂未找到应用的元素
+* 所以暂未使用
+*/
+
+@import "./common.scss";
+
+.clearfix {
+    zoom: 1;
+    &:after {
+      display: table;
+      content: '';
+      clear: both;
+    }
+    &:before {
+      display: table;
+      content: '';
+    }
+}
+
+.ff-t {
+    font-family: Tahoma;
+}
+
+
+.sB-comment a {
+    height: 17px;
+    padding-top: 34px;
+    padding-bottom: 3px;
+    background-position: 0 -59px;
+}
+
+.sB-share a {
+    background-position: 0 -118px;
+}
+
+.sB-goTop a {
+    background-position: 0 -177px;
+}
+
+
+
+
+#profile_block {
+    line-height: 24px;
+    text-align: left
+}
+
+
+#topics .post, .postDesc {
+    background: #fff;
+}
+
+#sidebar_search .catListTitle {
+    display: none;
+}
+
+.desc_img {
+    margin-left: 10px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px #aaa
+}
+
+#div_digg, #footer {
+    text-align: center
+}
+
+.headph:hover img {
+    -webkit-transform: rotate(360deg) scale(1.5);
+    transform: rotate(360deg) scale(1.5)
+}
+
+.headph img {
+    width: 48px;
+    height: 48px;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out
+}
+
+.Abstract {
+    // font-family: 'Microsoft Yahei';
+    padding: 15px;
+    color: #999;
+    border: 2px dotted #999;
+    @include border_radius(4px);
+}
+
+.First, .Second {
+    margin: 10px 0;
+    color: #fff;
+    padding: 6px 20px;
+    // font-family: 'Microsoft Yahei'
+}
+
+.First, .Second, .Third, .demo {
+    clear: both;
+    @include border_radius(4px);
+}
+
+.First {
+    font-size: 20px;
+    background: $base_color;
+}
+
+.Second {
+    font-size: 18px;
+    background: #93c8a2;
+}
+
+.Third {
+    // font-family: 'Microsoft Yahei';
+    font-size: 16px;
+    margin: 15px 0;
+    padding: 6px 20px;
+    color: #999;
+    background: #c6efd2;
+}
+
+.note {
+    // font-family: 'Microsoft Yahei';
+    font-size: 15px;
+    clear: both;
+    margin: 10px 0;
+    padding: 15px 20px 15px 60px;
+    box-shadow: 0 0 8px #aaa;
+}
+
+.demo {
+    font-size: 16px;
+    overflow: auto;
+    padding: 6px 20px;
+    color: #fff;
+    background: orange;
+}
+
+.syntaxhighlighter .line.alt2 {
+    background-color: #fff !important;
+}
+
+
+
+// #BlogPostCategory a, #LauncherLogoLink:hover, #RecentCommentsBlock a, #topics a:hover, .catListTag a {
+//     padding: 1px 3px;
+//     text-decoration: none;
+//     color: #fff;
+//     @include border_radius(3px);
+//     background-color: $base_color;
+// }
+
+#cnblogs_post_body img {
+    max-width: 100% !important;
+}

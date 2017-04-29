@@ -57,4 +57,52 @@
     border: none;
 		@extend %box_gradual;
 	}
+	//评论列表 与 发表评论 标题文字
+	#commentform_title, .feedback_area_title {
+	    border-bottom: solid 3px desaturate($base_color, 20%);
+			font-size: 20px;
+	    margin-bottom: 10px;
+	    padding: 10px 20px 5px 10px;
+	    color: $base_color;
+	    background-image: none;
+	}
+}
+
+
+#blog_post_info {
+	> #green_channel {
+		//好文要顶 关注我 收藏该文
+		float: left;
+	}
+	> #author_profile {
+		//作者信息
+		display:none;
+	}
+	> #div_digg {
+		//推荐 反对
+		margin-right: 0;
+		.diggit, .buryit {
+			float: none;
+			display: inline-block;
+			margin: 0 5px;
+		}
+	}
+}
+
+.feedbackListSubtitle {
+    font-size: 12px;
+    font-weight: 400;
+    color: #888;
+    a {
+      color: #888;
+    }
+}
+//评论
+.feedbackItem {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 10px 0;
+    padding: 20px;
+    background: $light_gray;
+    box-shadow: 0 0 5px #aaa
 }

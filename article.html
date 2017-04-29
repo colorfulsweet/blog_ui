@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)http://www.cnblogs.com/programInit/p/6581285.html -->
+<!-- saved from url=(0049)http://www.cnblogs.com/programInit/p/6785777.html -->
 <html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>webpack(2) - 加载器 - 日月追影俯河山 - 博客园</title>
-<link type="text/css" rel="stylesheet" href="./article_files/blog-common.css">
+<title>sass - 语法(1) - 日月追影俯河山 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./index_files/blog-common.css">
 <link type="text/css" rel="stylesheet" href="./dist/css/cnblog.css">
-<link id="mobile-style" media="only screen and (max-width: 768px)" type="text/css" rel="stylesheet" href="./article_files/bundle-LessIsMore-mobile.css">
+<link id="mobile-style" media="only screen and (max-width: 768px)" type="text/css" rel="stylesheet" href="./index_files/bundle-LessIsMore-mobile.css">
 <link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/programInit/rss">
 <link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/programInit/rsd.xml">
 <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/programInit/wlwmanifest.xml">
-<script async="" src="./article_files/analytics.js"></script><script src="./article_files/jquery.js" type="text/javascript"></script>
-<script type="text/javascript">var currentBlogApp = 'programInit', cb_enable_mathjax=false;var isLogined=true;</script>
-<script src="./article_files/blog-common.js" type="text/javascript"></script>
+<script async="" src="./index_files/analytics.js"></script>
+<script src="./index_files/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+var currentBlogApp = 'programInit', cb_enable_mathjax=false;var isLogined=true;
+</script>
+<script src="./index_files/blog-common.js" type="text/javascript"></script>
 <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
 .en-markup-crop-options {
     top: 18px !important;
@@ -38,23 +41,18 @@
 	<div id="blogTitle">
 
 <!--done-->
-<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/programInit/">日月追影俯河山</a></div>
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle" href="#">日月追影俯河山</a></div>
 <div class="subtitle">世上有条唯一的路，除你无人能走</div>
-
-
-
-
 	</div><!--end: blogTitle 博客的标题和副标题 -->
 	<div id="navigator">
 
 <ul id="navList">
-<li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
-<li id="nav_myhome"><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/programInit/">首页</a></li>
-<li id="nav_newpost"><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
-<li id="nav_contact"><a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/%E6%97%A5%E6%9C%88%E8%BF%BD%E5%BD%B1%E4%BF%AF%E6%B2%B3%E5%B1%B1">联系</a></li>
-<li id="nav_rss"><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/programInit/rss">订阅</a>
-<!--<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/programInit/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
-<li id="nav_admin"><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+<li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="#">博客园</a></li>
+<li id="nav_myhome"><a id="blog_nav_myhome" class="menu" href="#">首页</a></li>
+<li id="nav_newpost"><a id="blog_nav_newpost" class="menu" rel="nofollow" href="#">新随笔</a></li>
+<li id="nav_contact"><a id="blog_nav_contact" class="menu" rel="nofollow" href="#">联系</a></li>
+<li id="nav_rss"><a id="blog_nav_rss" class="menu" href="#">订阅</a></li>
+<li id="nav_admin"><a id="blog_nav_admin" class="menu" rel="nofollow" href="#">管理</a></li>
 </ul>
 
 		<div class="blogStats">
@@ -62,7 +60,7 @@
 			<div id="blog_stats">
 <!--done-->
 随笔-12&nbsp;
-文章-0&nbsp;
+文章-1&nbsp;
 评论-0&nbsp;
 </div>
 
@@ -78,135 +76,215 @@
 <div id="topics">
 	<div class="post">
 		<h1 class="postTitle">
-			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/programInit/p/6581285.html">webpack(2) - 加载器</a>
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/programInit/p/6785777.html">sass - 语法(1)</a>
 		</h1>
 		<div class="clear"></div>
 		<div class="postBody">
-			<div id="cnblogs_post_body" class="cnblogs-markdown"><p>使用webpack本身 , 只是实现了js文件的集中管理 , 并且使用commonJS风格进行模块化管理<br>
-但是实际的前端开发当中还会用到各种的资源文件 , 比如css , 图片文件 , 字体文件等等<br>
-要实现对这些资源文件的统一管理 , 就要用webpack配合各种加载器来实现</p>
-<h3 id="css-loader-与-style-loader">css-loader 与 style-loader</h3>
-<p>css-loader是用于在JS当中加载CSS文件<br>
-style-loader是用于将CSS文件的样式加载到页面当中</p>
-<ol>
-<li><p>安装<br>
-<code>npm install css-loader style-loader --save-dev</code></p></li>
-<li><p>配置加载器</p></li>
-</ol>
-<p>webpack.config.js</p>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="va"><span class="hljs-built_in">module</span></span>.<span class="at">exports</span> <span class="op">=</span> <span class="op">{</span>
-<span class="co"><span class="hljs-comment">//.... (其他配置项)</span></span>
-    <span class="dt"><span class="hljs-built_in">module</span></span><span class="op">:</span> <span class="op">{</span>
-        <span class="co"><span class="hljs-comment">//加载器配置</span></span>
-        <span class="co"><span class="hljs-comment">//告诉webpack每一种类型文件都需要使用什么加载器来处理</span></span>
-        <span class="dt">loaders</span><span class="op">:</span> [
-            <span class="op">{</span> <span class="dt">test</span><span class="op">:</span> <span class="ss"><span class="hljs-regexp">/</span></span><span class="sc"><span class="hljs-regexp">\.</span></span><span class="ss"><span class="hljs-regexp">css</span></span><span class="sc"><span class="hljs-regexp">$</span></span><span class="ss"><span class="hljs-regexp">/</span></span><span class="op">,</span> <span class="dt">loaders</span><span class="op">:</span> [<span class="st"><span class="hljs-string">"style-loader"</span></span><span class="op">,</span><span class="st"><span class="hljs-string">"css-loader"</span></span>] <span class="op">}</span>
-        ]
-    <span class="op">}</span>
-<span class="op">}</span></code></pre></div>
-<p>test当中是对文件名的正则匹配 , 符合匹配的会使用对应的加载器去加载</p>
-<ol>
-<li><p>在JS当中引入css样式<br>
-编写一个css文件 , 在js当中直接引入即可</p>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="at"><span class="hljs-built_in">require</span></span>(<span class="st"><span class="hljs-string">"./style/base.css"</span></span>)<span class="op">;</span></code></pre></div></li>
-<li><p>执行webpack打包操作<br>
-<img src="./article_files/949746-20170319180550666-1314237540.png"></p></li>
-</ol>
-<h3 id="url-loader">url-loader</h3>
-<p>这是适用于图片文件的加载器 , 它可以将图片文件转化为base64编码 , 直接嵌入到JS当中</p>
-<ol>
-<li><p>安装<br>
-<code>npm install url-loader --save-dev</code></p></li>
-<li><p>配置文件匹配</p>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="va"><span class="hljs-built_in">module</span></span>.<span class="at">exports</span> <span class="op">=</span> <span class="op">{</span>
-<span class="co"><span class="hljs-comment">//.... (其他配置项)</span></span>
-<span class="dt"><span class="hljs-built_in">module</span></span><span class="op">:</span> <span class="op">{</span>
-    <span class="dt">loaders</span><span class="op">:</span> [
-    <span class="op">{</span> <span class="dt">test</span><span class="op">:</span> <span class="ss"><span class="hljs-regexp">/</span></span><span class="sc"><span class="hljs-regexp">\.</span></span><span class="ss"><span class="hljs-regexp">css</span></span><span class="sc"><span class="hljs-regexp">$</span></span><span class="ss"><span class="hljs-regexp">/</span></span><span class="op">,</span> <span class="dt">loaders</span><span class="op">:</span> [<span class="st"><span class="hljs-string">"style-loader"</span></span><span class="op">,</span><span class="st"><span class="hljs-string">"css-loader"</span></span>] <span class="op">},</span>
-    <span class="op">{</span> <span class="dt">test</span><span class="op">:</span> <span class="ss"><span class="hljs-regexp">/</span></span><span class="sc"><span class="hljs-regexp">\.(</span></span><span class="ss"><span class="hljs-regexp">png</span></span><span class="sc"><span class="hljs-regexp">|</span></span><span class="ss"><span class="hljs-regexp">jpg</span></span><span class="sc"><span class="hljs-regexp">|</span></span><span class="ss"><span class="hljs-regexp">jpeg</span></span><span class="sc"><span class="hljs-regexp">|</span></span><span class="ss"><span class="hljs-regexp">gif</span></span><span class="sc"><span class="hljs-regexp">)$</span></span><span class="ss"><span class="hljs-regexp">/</span></span><span class="op">,</span> <span class="dt">loader</span><span class="op">:</span> <span class="st"><span class="hljs-string">"url-loader"</span></span> <span class="op">}</span> <span class="co"><span class="hljs-comment">//图片资源的加载器</span></span>
-    ]
-<span class="op">}</span>
-<span class="op">}</span></code></pre></div></li>
-<li><p>在JS当中直接使用图片资源</p></li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="kw"><span class="hljs-keyword">const</span></span> picture <span class="op">=</span> <span class="at"><span class="hljs-built_in">require</span></span>(<span class="st"><span class="hljs-string">"./images/test.jpeg"</span></span>)<span class="op">;</span>
-<span class="co"><span class="hljs-comment">// img元素</span></span>
-<span class="va"><span class="hljs-built_in">document</span></span>.<span class="at">getElementById</span>(<span class="st"><span class="hljs-string">"testImg2"</span></span>).<span class="at">src</span> <span class="op">=</span> picture<span class="op">;</span>
-<span class="co"><span class="hljs-comment">// div元素</span></span>
-<span class="kw"><span class="hljs-keyword">var</span></span> img3 <span class="op">=</span> <span class="va"><span class="hljs-built_in">document</span></span>.<span class="at">getElementById</span>(<span class="st"><span class="hljs-string">"testImg3"</span></span>)<span class="op">;</span>
-<span class="va">img3</span>.<span class="va">style</span>.<span class="at">backgroundImage</span> <span class="op">=</span> <span class="st"><span class="hljs-string">"url("</span></span> <span class="op">+</span> picture <span class="op">+</span> <span class="st"><span class="hljs-string">")"</span></span><span class="op">;</span>
-<span class="va">img3</span>.<span class="va">style</span>.<span class="at">width</span> <span class="op">=</span> <span class="dv"><span class="hljs-number">200</span></span><span class="op">;</span>
-<span class="va">img3</span>.<span class="va">style</span>.<span class="at">height</span> <span class="op">=</span> <span class="dv"><span class="hljs-number">200</span></span><span class="op">;</span></code></pre></div>
-<ol>
-<li>执行打包后获得的结果如下<br>
-<img src="./article_files/949746-20170319181423010-146431446.png"></li>
-</ol>
+			<div id="cnblogs_post_body" class="cnblogs-markdown"><h3 id="变量">变量</h3>
+<p>在scss当中定义变量的语法如下<br>
+</p><pre><br>
+$变量名 : 变量值;<br>
+</pre><br>
+代码块外部定义的变量可以在全局范围内使用<p></p>
+<p>在代码块内部定义的变量是局部变量<br>
+例如</p>
+<pre class="scss"><code class="hljs ruby">.box {
+    $color<span class="hljs-symbol">:red</span>;
+    a{
+        <span class="hljs-symbol">color:</span>$color;
+    }
+}</code></pre>
+<p>如果该变量的值需要嵌入到字符串当中 , 需要加<code>#{ }</code></p>
+<pre class="scss"><code class="hljs perl">$side : left;
+.box {
+    border-<span class="hljs-comment">#{$side}-radius:5px;</span>
+}</code></pre>
+<h4 id="默认变量">默认变量</h4>
+<p>sass的默认变量一般用来设置默认值 , 然后根据需求来进行覆盖<br>
+例如</p>
+<pre class="scss"><code class="hljs groovy"><span class="hljs-string">$a_padding :</span> <span class="hljs-number">20</span>px !<span class="hljs-keyword">default</span>;
+<span class="hljs-string">$a_padding :</span> <span class="hljs-number">6</span>px;</code></pre>
+<p>如果对默认变量的值进行了覆盖 , 那么实际输出的就是覆盖之后的值 , 否则输出的就是默认值</p>
+<p>如果是在一个单文件当中 , 并没有必要这样做<br>
+默认变量在<code>组件化开发</code>的时候会非常有用</p>
 <blockquote>
-<p>如果在css文件当中引用图片文件 , 效果也是一样的</p>
+<p>什么时候需要声明变量</p>
+<ul>
+<li>该值至少重复出现了两次</li>
+<li>该值至少可能会被更新一次</li>
+<li>该值所有的表现都与变量有关</li>
+</ul>
 </blockquote>
-<h3 id="file-loader">file-loader</h3>
-<p>任何的资源文件都可以使用<code>file-loader</code>进行加载 , 也包括图片文件<br>
-只不过使用这个加载器加载的文件 , 不会对文件内容任何处理 , 而是直接把文件放入到打包之后的指定目录当中</p>
-<p>webpack.config.js</p>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="va"><span class="hljs-built_in">module</span></span>.<span class="at">exports</span> <span class="op">=</span> <span class="op">{</span>
-    <span class="dt">entry</span><span class="op">:</span> <span class="op">{</span>
-        <span class="dt">index </span><span class="op">:</span> <span class="st"><span class="hljs-string">'./src/entry.js'</span></span>
-    <span class="op">},</span>
-    <span class="dt">output</span><span class="op">:</span> <span class="op">{</span>
-        <span class="dt">path</span><span class="op">:</span> __dirname<span class="op">+</span><span class="st"><span class="hljs-string">"/dist"</span></span><span class="op">,</span>
-        <span class="dt">filename</span><span class="op">:</span> <span class="st"><span class="hljs-string">'bundle.js'</span></span>
-    <span class="op">},</span>
-    <span class="dt"><span class="hljs-built_in">module</span></span><span class="op">:</span> <span class="op">{</span>
-        <span class="dt">loaders</span><span class="op">:</span> [
-        <span class="op">{</span> <span class="dt">test</span><span class="op">:</span> <span class="ss"><span class="hljs-regexp">/</span></span><span class="sc"><span class="hljs-regexp">\.</span></span><span class="ss"><span class="hljs-regexp">css</span></span><span class="sc"><span class="hljs-regexp">$</span></span><span class="ss"><span class="hljs-regexp">/</span></span><span class="op">,</span> <span class="dt">loaders</span><span class="op">:</span> [<span class="st"><span class="hljs-string">"style-loader"</span></span><span class="op">,</span><span class="st"><span class="hljs-string">"css-loader"</span></span>] <span class="op">},</span>
-        <span class="co"><span class="hljs-comment">//配置资源文件所对应的文件类型(正则)</span></span>
-        <span class="op">{</span> <span class="dt">test</span><span class="op">:</span> <span class="ss"><span class="hljs-regexp">/</span></span><span class="sc"><span class="hljs-regexp">\.(</span></span><span class="ss"><span class="hljs-regexp">png</span></span><span class="sc"><span class="hljs-regexp">|</span></span><span class="ss"><span class="hljs-regexp">jpg</span></span><span class="sc"><span class="hljs-regexp">|</span></span><span class="ss"><span class="hljs-regexp">gif</span></span><span class="sc"><span class="hljs-regexp">|</span></span><span class="ss"><span class="hljs-regexp">svg</span></span><span class="sc"><span class="hljs-regexp">|</span></span><span class="ss"><span class="hljs-regexp">woff</span></span><span class="sc"><span class="hljs-regexp">|</span></span><span class="ss"><span class="hljs-regexp">woff2</span></span><span class="sc"><span class="hljs-regexp">|</span></span><span class="ss"><span class="hljs-regexp">ttf</span></span><span class="sc"><span class="hljs-regexp">|</span></span><span class="ss"><span class="hljs-regexp">eot</span></span><span class="sc"><span class="hljs-regexp">)$</span></span><span class="ss"><span class="hljs-regexp">/</span></span><span class="op">,</span> <span class="dt">loader</span><span class="op">:</span> <span class="st"><span class="hljs-string">"file-loader"</span></span> <span class="op">}</span>
-        ]
-    <span class="op">}</span>
-<span class="op">};</span></code></pre></div>
-<p>比如在css文件当中引用了一个图片文件</p>
-<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css hljs"><span class="hljs-selector-tag">body</span> <span class="kw">{</span>
-    <span class="kw"><span class="hljs-attribute">background-color</span>:</span> <span class="dt"><span class="hljs-number">#ccc</span></span><span class="kw">;</span>
+<h3 id="嵌套">嵌套</h3>
+<p>使用嵌套的方式来编写css代码 , 可以使元素之间的层级关系更清晰 , 代码的可读性更强</p>
+<h4 id="选择器嵌套">选择器嵌套</h4>
+<pre class="scss"><code class="hljs nginx"><span class="hljs-section">div</span> {
+    <span class="hljs-section">h1</span> {
+        <span class="hljs-attribute">color</span> :red;
+    }
+}</code></pre>
+<p>编译后的结果为</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span> <span class="hljs-selector-tag">h1</span> {
+    <span class="hljs-attribute">color </span>: red;
+}</code></pre>
+<p>前面如果加上 <code>&gt;</code>可以作为父子选择器</p>
+<p>在嵌套的代码块内 , 可以使用<code>&amp;</code>引用父元素<br>
+比如</p>
+<pre class="scss"><code class="hljs dos">a {
+    &amp;:hover{<span class="hljs-built_in">color</span>:red;}
+    &amp;:visited{<span class="hljs-built_in">color</span>:gray;}
+}</code></pre>
+<h4 id="属性嵌套">属性嵌套</h4>
+<p>有一些复合属性可以使用嵌套的方式来写<br>
+比如border</p>
+<pre class="scss"><code class="hljs css"><span class="hljs-selector-tag">p</span> {
+    <span class="hljs-attribute">border </span>: {
+        color:red;
+        <span class="hljs-attribute">width</span>:<span class="hljs-number">2px</span>;
+    }
+}</code></pre>
+<p><strong>注意</strong> : border的后面必须要加上冒号</p>
+<h3 id="注释">注释</h3>
+<p>SCSS可以有两种风格的注释<br>
+一种是标准的css注释 <code>/*  */</code><br>
+编译会保留<br>
+另一种是单行注释 <code>//</code> , 编译过程不保留</p>
+<h3 id="mixin">Mixin</h3>
+<p>Mixin有点像C语言的宏定义 , 是可以重用的代码块</p>
+<pre class="scss"><code class="hljs swift"><span class="hljs-comment">//使用@mixin命令,定义一个代码块</span>
+@mixin <span class="hljs-keyword">left</span> {
+    float : <span class="hljs-keyword">left</span>;
+    margin-<span class="hljs-keyword">left</span> : 10px;
+}
+<span class="hljs-comment">//使用@include调用这个mixin</span>
+.box {
+    @include <span class="hljs-keyword">left</span>;
+}</code></pre>
+<p>mixin的强大之处 , 在于可以去指定参数和缺省值</p>
+<pre class="scss"><code class="hljs cs">@<span class="hljs-function">mixin <span class="hljs-title">left</span>(<span class="hljs-params">$<span class="hljs-keyword">value</span>:<span class="hljs-number">10</span>px</span>) </span>{
+    <span class="hljs-keyword">float</span> : left;
+    margin-left : $<span class="hljs-keyword">value</span>;
+}
+.box {
+    @<span class="hljs-function">include <span class="hljs-title">left</span>(<span class="hljs-params"><span class="hljs-number">20</span>px</span>)</span>;
+}</code></pre>
+<p>如果引入的时候不传参数 , 则使用缺省值<br>
+实例 : 生成浏览器前缀</p>
+<pre class="scss"><code class="hljs smalltalk">@mixin rounded(<span class="hljs-string">$v</span>ert, <span class="hljs-string">$h</span>orz, <span class="hljs-string">$r</span>adius: <span class="hljs-number">10</span>px) {
+　border-#{<span class="hljs-string">$v</span>ert}-#{<span class="hljs-string">$h</span>orz}-radius: <span class="hljs-string">$r</span>adius;
+　-moz-border-radius-#{<span class="hljs-string">$v</span>ert}#{<span class="hljs-string">$h</span>orz}: <span class="hljs-string">$r</span>adius;
+　-webkit-border-#{<span class="hljs-string">$v</span>ert}-#{<span class="hljs-string">$h</span>orz}-radius: <span class="hljs-string">$r</span>adius;
+}
+
+<span class="hljs-symbol">#navbar</span> li {
+    @include rounded(top,left);
+}
+<span class="hljs-symbol">#footer</span> {
+    @include rounded(top,left,<span class="hljs-number">5</span>px);
+}</code></pre>
+<h3 id="颜色函数">颜色函数</h3>
+<p>颜色函数是基于某个颜色进行的色彩调整<br>
+利用这些函数 , 可以很方便完成界面上风格统一的色彩搭配<br>
+涉及色彩的部分 , 可以很方便修改 , 完成主题风格的切换</p>
+<pre class="scss"><code class="hljs dts">$base_color : chocolate;
+
+@mixin <span class="hljs-class">size </span>{
+<span class="hljs-symbol">  width:</span><span class="hljs-number">200</span>px;
+<span class="hljs-symbol">  height:</span><span class="hljs-number">100</span>px;
+}
+
+.<span class="hljs-class">div1 </span>{
+  @include size;
+<span class="hljs-symbol">  background:</span>{
+<span class="hljs-symbol">    color:</span> darken($base_color, <span class="hljs-number">10</span>%);
+  }
+}
+.<span class="hljs-class">div2 </span>{
+  @include size;
+<span class="hljs-symbol">  background:</span>{
+<span class="hljs-symbol">    color:</span> $base_color;
+  }
+}
+.<span class="hljs-class">div3 </span>{
+  @include size;
+<span class="hljs-symbol">  background:</span>{
+<span class="hljs-symbol">    color:</span> lighten($base_color, <span class="hljs-number">10</span>%);
+  }
+}</code></pre>
+<p>效果图<br>
+<img src="./article_files/949746-20170429181342647-1952654113.png"></p>
+<p>常用的颜色函数</p>
+<ul>
+<li><code>darken</code> , <code>lighten</code> - 调整亮度 , 变暗/变亮</li>
+<li><code>sturate</code> , <code>desaturate</code> - 增加/减小 饱和度</li>
+<li><code>adjust-hue</code> - 调整 色相</li>
+<li><code>grayscale</code> - 灰度处理</li>
+<li><code>complement</code> - 色彩反相</li>
+</ul>
+<h3 id="文件引入">文件引入</h3>
+<p>使用<code>@import</code> 引入另一个样式文件 , 可以是scss文件 , 也可以是css文件</p>
+<pre class="scss"><code class="hljs swift">@<span class="hljs-keyword">import</span> "path/filename.scss"
+@<span class="hljs-keyword">import</span> "path/base.css"</code></pre>
+<h3 id="继承">继承</h3>
+<p>SASS允许一个选择器 , 继承另一个选择器</p>
+<pre class="scss"><code class="hljs dts">.<span class="hljs-class">class1 </span>{
+    border : <span class="hljs-number">1</span>px solid <span class="hljs-meta">#ddd;</span>
+}
+.<span class="hljs-class">class2 </span>{
+    @extend .class1;
+    font-size : <span class="hljs-number">120</span>%;
+}</code></pre>
+<p>在编译过后 , 会生成</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css hljs"><span class="fl"><span class="hljs-selector-class">.class1</span></span>, <span class="fl"><span class="hljs-selector-class">.class2</span></span> <span class="kw">{</span>
+    <span class="kw"><span class="hljs-attribute">border</span></span><span class="hljs-attribute"> </span><span class="kw">:</span> <span class="dt"><span class="hljs-number">1px</span></span> <span class="dt">solid</span> <span class="dt"><span class="hljs-number">#ddd</span></span><span class="kw">;</span>
 <span class="kw">}</span>
-<span class="fl"><span class="hljs-selector-id">#testImg</span></span> <span class="kw">{</span>
-    <span class="kw"><span class="hljs-attribute">width</span>:</span><span class="dt"><span class="hljs-number">200px</span></span><span class="kw">;</span>
-    <span class="kw"><span class="hljs-attribute">height</span>:</span><span class="dt"><span class="hljs-number">200px</span></span><span class="kw">;</span>
-    <span class="kw"><span class="hljs-attribute">background-image</span>:</span> <span class="dt"><span class="hljs-built_in">url</span>(</span><span class="st"><span class="hljs-string">"../images/test.png"</span></span><span class="dt">)</span><span class="kw">;</span>
+<span class="fl"><span class="hljs-selector-class">.class2</span></span> <span class="kw">{</span>
+    <span class="kw"><span class="hljs-attribute">font-size</span>:</span><span class="dt"><span class="hljs-number">120%</span></span><span class="kw">;</span>
 <span class="kw">}</span></code></pre></div>
-<p>执行打包之后就会根据图片的哈希码作为命名在输出目录下生成一个图片文件<br>
-<img src="./article_files/949746-20170319181748541-551091754.png"></p>
-<p>并且对应的css样式也会被替换<br>
-<img src="./article_files/949746-20170319181803385-537227190.png"></p>
-<hr>
-<p><strong>补充 : </strong><br>
-在项目当中 , 我们通常把较小的图片文件转化为base64编码 , 较大的图片文件则直接保留原文件<br>
-避免js文件太过臃肿 , 加载缓慢<br>
-<code>url-loader</code>提供了一个<code>limit</code>参数 , 可以对图片的大小进行限制 ( 单位是字节 ) , 小于该值的由url-loader处理<br>
-大于这个值的 , 则直接交给<code>file-loader</code>处理</p>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="va"><span class="hljs-built_in">module</span></span>.<span class="at">exports</span> <span class="op">=</span> <span class="op">{</span>
-<span class="co"><span class="hljs-comment">//...(其他配置项)</span></span>
-    <span class="dt"><span class="hljs-built_in">module</span></span><span class="op">:</span> <span class="op">{</span>
-        <span class="dt">loaders</span><span class="op">:</span> [
-        <span class="op">{</span> <span class="dt">test</span><span class="op">:</span> <span class="ss"><span class="hljs-regexp">/</span></span><span class="sc"><span class="hljs-regexp">\.</span></span><span class="ss"><span class="hljs-regexp">css</span></span><span class="sc"><span class="hljs-regexp">$</span></span><span class="ss"><span class="hljs-regexp">/</span></span><span class="op">,</span> <span class="dt">loaders</span><span class="op">:</span> [<span class="st"><span class="hljs-string">"style-loader"</span></span><span class="op">,</span><span class="st"><span class="hljs-string">"css-loader"</span></span><span class="op">,</span><span class="st"><span class="hljs-string">"postcss-loader"</span></span>]<span class="op">},</span>
-        <span class="op">{</span> <span class="dt">test</span><span class="op">:</span> <span class="ss"><span class="hljs-regexp">/</span></span><span class="sc"><span class="hljs-regexp">\.(</span></span><span class="ss"><span class="hljs-regexp">png</span></span><span class="sc"><span class="hljs-regexp">|</span></span><span class="ss"><span class="hljs-regexp">jpg</span></span><span class="sc"><span class="hljs-regexp">|</span></span><span class="ss"><span class="hljs-regexp">jpeg</span></span><span class="sc"><span class="hljs-regexp">|</span></span><span class="ss"><span class="hljs-regexp">gif</span></span><span class="sc"><span class="hljs-regexp">)$</span></span><span class="ss"><span class="hljs-regexp">/</span></span><span class="op">,</span> <span class="dt">loader</span><span class="op">:</span> <span class="st"><span class="hljs-string">"url-loader"</span></span> <span class="op">,</span> <span class="dt">query </span><span class="op">:{</span><span class="dt">limit</span><span class="op">:</span><span class="dv"><span class="hljs-number">20000</span></span><span class="op">,</span><span class="dt">name</span><span class="op">:</span><span class="st"><span class="hljs-string">"[name]-[hash:8].[ext]"</span></span><span class="op">,</span><span class="dt">publicPath</span><span class="op">:</span><span class="st"><span class="hljs-string">"../images/"</span></span><span class="op">,</span><span class="dt">outputPath</span><span class="op">:</span><span class="st"><span class="hljs-string">"images/"</span></span><span class="op">}},</span>
-        <span class="co"><span class="hljs-comment">//会将图片转化为base64编码直接写入到js文件当中</span></span>
-    <span class="co"><span class="hljs-comment">//  { test: /\.(png|jpg|jpeg|gif|svg|eot)$/, loader: "file-loader", query :{name:"images/[name]-[hash:8].[ext]"}},</span></span>
-        <span class="op">{</span> <span class="dt">test</span><span class="op">:</span> <span class="ss"><span class="hljs-regexp">/</span></span><span class="sc"><span class="hljs-regexp">\.(</span></span><span class="ss"><span class="hljs-regexp">svg</span></span><span class="sc"><span class="hljs-regexp">|</span></span><span class="ss"><span class="hljs-regexp">eot</span></span><span class="sc"><span class="hljs-regexp">)$</span></span><span class="ss"><span class="hljs-regexp">/</span></span><span class="op">,</span> <span class="dt">loader</span><span class="op">:</span> <span class="st"><span class="hljs-string">"file-loader"</span></span><span class="op">,</span> <span class="dt">query </span><span class="op">:{</span><span class="dt">name</span><span class="op">:</span><span class="st"><span class="hljs-string">"[name]-[hash:8].[ext]"</span></span><span class="op">,</span><span class="dt">publicPath</span><span class="op">:</span><span class="st"><span class="hljs-string">"../fonts/"</span></span><span class="op">,</span><span class="dt">outputPath</span><span class="op">:</span><span class="st"><span class="hljs-string">"fonts/"</span></span><span class="op">}},</span>
-    <span class="co"><span class="hljs-comment">//注意 : file-loader配置的文件类型匹配不要和url-loader冲突</span></span>
-    ]
-    <span class="op">}</span>
-<span class="op">};</span></code></pre></div>
-<p>此时传递给url-loader的参数 , 如果资源文件被交给了file-loader来处理 , 这些参数也会传给file-loader<br>
-name就属于给file-loader去用的参数 , 代表打包以后文件的命名规则<br>
-打包后的结果如下<br>
-<img src="./article_files/949746-20170325224310111-802750643.png"></p>
+<p>相比于mixin会生成很多重复的代码 , 这种方式能够对代码进行复用 , 有利于提高css解析的效率</p>
+<h3 id="流程控制">流程控制</h3>
+<h4 id="条件语句">条件语句</h4>
+<p>使用<code>@if</code>和<code>@else</code>可以进行判断</p>
+<pre class="scss"><code class="hljs css">@<span class="hljs-keyword">if</span> lightness($color) &gt; <span class="hljs-number">30%</span> {
+　<span class="hljs-selector-tag">background-color</span>: <span class="hljs-selector-id">#000</span>;
+} @<span class="hljs-keyword">else</span> {
+　<span class="hljs-selector-tag">background-color</span>: <span class="hljs-selector-id">#fff</span>;
+}</code></pre>
+<h4 id="循环语句">循环语句</h4>
+<p>for循环</p>
+<pre class="scss"><code class="hljs cs">@<span class="hljs-keyword">for</span> $i <span class="hljs-keyword">from</span> <span class="hljs-number">1</span> to <span class="hljs-number">10</span> {
+  .border-<span class="hljs-meta">#{$i} {</span>
+    border: <span class="hljs-meta">#{$i}px solid blue;</span>
+  }
+}</code></pre>
+<p>while循环</p>
+<pre class="scss"><code class="hljs perl">$i: <span class="hljs-number">6</span>;
+@while $i &gt; <span class="hljs-number">0</span> {
+  .item-<span class="hljs-comment">#{$i} { width: 2em * $i; }</span>
+  $i: $i - <span class="hljs-number">2</span>;
+}</code></pre>
+<p>each循环 , 类似于迭代器</p>
+<pre class="scss"><code class="hljs ruby">@each $member <span class="hljs-keyword">in</span> a, b, c, d {
+  .<span class="hljs-comment">#{$member} {</span>
+    background-<span class="hljs-symbol">image:</span> url(<span class="hljs-string">"/image/<span class="hljs-subst">#{$member}</span>.jpg"</span>);
+  }
+}</code></pre>
+<p><img src="./article_files/949746-20170429181316319-1177356235.png"></p>
+<h3 id="自定义函数">自定义函数</h3>
+<p>使用<code>@function</code>可以自定义一个函数</p>
+<pre class="scss"><code class="hljs css">@<span class="hljs-keyword">function</span> double($n) {
+    @<span class="hljs-keyword">return</span> $n * <span class="hljs-number">2</span>;
+}
+<span class="hljs-selector-id">#sidebar</span> {
+    <span class="hljs-attribute">width </span>: <span class="hljs-built_in">double</span>(<span class="hljs-number">5px</span>);
+}</code></pre>
 </div><div id="MySignature"></div>
 <div class="clear"></div>
 <div id="blog_post_info_block">
-<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/programInit/category/942611.html" target="_blank">JavaScript</a></div>
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/programInit/category/993614.html" target="_blank">前端杂烩</a></div>
 <div id="EntryTag"></div>
 <div id="blog_post_info"><div id="green_channel">
-        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(6581285,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(6785777,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
             <a id="green_channel_follow" onclick="follow(&#39;5bc2c530-c711-e611-9fc1-ac853d9f53cc&#39;);" href="javascript:void(0);">关注我</a>
     <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
     <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./article_files/icon_weibo_24.png" alt=""></a>
@@ -227,10 +305,10 @@ name就属于给file-loader去用的参数 , 代表打包以后文件的命名�
     </div>
 </div>
 <div id="div_digg">
-    <div class="diggit" onclick="votePost(6581285,&#39;Digg&#39;)">
+    <div class="diggit" onclick="votePost(6785777,&#39;Digg&#39;)">
         <span class="diggnum" id="digg_count">0</span>
     </div>
-    <div class="buryit" onclick="votePost(6581285,&#39;Bury&#39;)">
+    <div class="buryit" onclick="votePost(6785777,&#39;Bury&#39;)">
         <span class="burynum" id="bury_count">0</span>
     </div>
     <div class="clear"></div>
@@ -239,24 +317,41 @@ name就属于给file-loader去用的参数 , 代表打包以后文件的命名�
 </div>
 </div>
 <div class="clear"></div>
-<div id="post_next_prev"><a href="http://www.cnblogs.com/programInit/p/6581229.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/programInit/p/6581229.html" title="发布于2017-03-19 17:50">webpack(1) - 初见</a><br></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/programInit/p/6785756.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/programInit/p/6785756.html" title="发布于2017-04-29 18:03">sass(1) - 初见</a><br><a href="http://www.cnblogs.com/programInit/p/6785810.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/programInit/p/6785810.html" title="发布于2017-04-29 18:28">sass - 语法(2)</a><br></div>
 </div>
 
 
 		</div>
-		<div class="postDesc">posted @ <span id="post-date">2017-03-19 18:06</span> <a href="http://www.cnblogs.com/programInit/">日月追影俯河山</a> 阅读(<span id="post_view_count">21</span>) 评论(<span id="post_comment_count">0</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6581285" rel="nofollow">编辑</a> <a href="http://www.cnblogs.com/programInit/p/6581285.html#" onclick="AddToWz(6581285);return false;">收藏</a></div>
+		<div class="postDesc">posted @ <span id="post-date">2017-04-29 18:15</span> <a href="http://www.cnblogs.com/programInit/">日月追影俯河山</a> 阅读(<span id="post_view_count">2</span>) 评论(<span id="post_comment_count">1</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6785777" rel="nofollow">编辑</a> <a href="http://www.cnblogs.com/programInit/p/6785777.html#" onclick="AddToWz(6785777);return false;">收藏</a></div>
 	</div>
-	<script src="./article_files/highlight.min.js"></script><script>markdown_highlight();</script><script type="text/javascript">var allowComments=true,cb_blogId=283475,cb_entryId=6581285,cb_blogApp=currentBlogApp,cb_blogUserGuid='5bc2c530-c711-e611-9fc1-ac853d9f53cc',cb_entryCreatedDate='2017/3/19 18:06:00';loadViewCount(cb_entryId);</script>
+	<script src="./article_files/highlight.min.js"></script><script>markdown_highlight();</script><script type="text/javascript">var allowComments=true,cb_blogId=283475,cb_entryId=6785777,cb_blogApp=currentBlogApp,cb_blogUserGuid='5bc2c530-c711-e611-9fc1-ac853d9f53cc',cb_entryCreatedDate='2017/4/29 18:15:00';loadViewCount(cb_entryId);</script>
 
 </div><!--end: topics 文章、评论容器-->
-</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+</div><a name="!comments"></a><div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<!--done-->
+<div class="feedback_area_title">评论列表</div>
+<div class="feedbackNoItems"></div>
+
+
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"><a href="javascript:void(0);" onclick="return GetCommentBody(3680162)">修改</a><a href="javascript:void(0);" onclick="return DelComment(3680162,this)">删除</a></span>
+				</div>
+				<a href="http://www.cnblogs.com/programInit/p/6785777.html#3680162" class="layer">#1楼</a><a name="3680162" id="comment_anchor_3680162"></a>[<span class="louzhu">楼主</span>]<span id="comment-maxId" style="display:none;">3680162</span><span id="comment-maxDate" style="display:none;">2017/4/29 20:41:16</span>  <span class="comment_date">2017-04-29 20:41</span> <a id="a_comment_author_3680162" href="http://www.cnblogs.com/programInit/" target="_blank">日月追影俯河山</a> <a href="http://msg.cnblogs.com/send/%E6%97%A5%E6%9C%88%E8%BF%BD%E5%BD%B1%E4%BF%AF%E6%B2%B3%E5%B1%B1" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3680162" class="blog_comment_body">测试评论1</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3680162,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3680162,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3680162_avatar" style="display:none;">http://pic.cnblogs.com/face/949746/20170203181034.png</span>
+			</div>
+		</div>
+	<div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
 <div id="comment_form" class="commentform">
 <a name="commentform"></a>
-<div id="divCommentShow"></div>
-<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="http://www.cnblogs.com/programInit/p/6581285.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/programInit/p/6581285.html#top">返回顶部</a></div>
+<div id="divCommentShow"><div class="comment_my_posted"><img style="vertical-align:middle" src="./article_files/icon_comment.gif"> <a href="http://home.cnblogs.com/u/949746/"><b>日月追影俯河山</b></a>:<blockquote class="bq_post_comment">测试评论2</blockquote></div></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="http://www.cnblogs.com/programInit/p/6785777.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/programInit/p/6785777.html#top">返回顶部</a></div>
 <div id="comment_form_container">
 <div id="commentform_title">发表评论</div>
-<span id="tip_comment" style="color:Red"></span>
+<span id="tip_comment" style="color:Red">感谢您的回复:) 服务器端执行耗时46毫秒</span>
 <p>
 昵称：<input type="text" id="tbCommentAuthor" class="author" disabled="disabled" size="50" value="日月追影俯河山">
 </p>
@@ -280,7 +375,7 @@ name就属于给file-loader去用的参数 , 代表打包以后文件的命名�
 <span id="span_comment_canceledit" style="display:none"><a href="javascript:void(0);" onclick="return CancelCommentEdit()">不改了</a></span>
 <a href="javascript:void(0);" onclick="return logout();">退出</a>
 </p>
-<div id="tip_comment2" style="color:Red"></div>
+<div id="tip_comment2" style="color:Red">感谢您的回复:) 服务器端执行耗时46毫秒</div>
 <p>
 [Ctrl+Enter快捷键提交]
 </p>
@@ -292,10 +387,10 @@ name就属于给file-loader去用的参数 , 代表打包以后文件的命名�
 </div>
 </div>
 <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
-<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="http://cloud.qy.com.cn/68?a=cnblog" target="_blank">【推荐】群英云服务器性价王，2核4G5M BGP带宽 68元首月！</a><br><a href="http://web.tanzhouedu.com/index/keCourse.html" target="_blank">【粉丝福利】Web前端基础到高级在线直播教学</a><br><a href="https://group.cnblogs.com/topic/76725.html" target="_blank">【福利】阿里云免费套餐升级，更多产品，更久时长</a><br></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="http://cloud.qy.com.cn/68?a=cnblog" target="_blank">【推荐】群英云服务器性价王，2核4G5M BGP带宽 68元首月！</a><br><a href="https://group.cnblogs.com/topic/76725.html" target="_blank">【福利】阿里云免费套餐升级，更多产品，更久时长</a><br></div>
 <div id="opt_under_post"></div>
-<div id="cnblogs_c1" class="c_ad_block"><a href="http://www.gcpowertools.com.cn/products/spreadjs/?utm_source=cnblogs&amp;utm_medium=blogpage&amp;utm_term=bottom&amp;utm_content=SpreadJS&amp;utm_campaign=community" target="_blank"><img width="300" height="250" src="./article_files/24442-20170331214703992-1877351007.gif" alt="SpreadJS"></a></div>
-<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/568284/" target="_blank">股权已质押97% 贾跃亭下一步靠土地解围？</a><br> ·  <a href="http://news.cnblogs.com/n/568283/" target="_blank">Google Home或Amazon Echo值得买吗？</a><br> ·  <a href="http://news.cnblogs.com/n/568282/" target="_blank">扎堆IPO？互联网金融将迎赴美上市热潮</a><br> ·  <a href="http://news.cnblogs.com/n/568268/" target="_blank">同程旅游旗下航空公司同程捷运已成立，主运营基地在南通</a><br> ·  <a href="http://news.cnblogs.com/n/568281/" target="_blank">苹果、特斯拉等公司对加州政府提要求：放宽无人驾驶汽车测试规定</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="cnblogs_c1" class="c_ad_block"><a href="http://www.grapecity.com.cn/enterprise-solutions/huozige/?utm_source=cnblogs&amp;utm_medium=blogpage&amp;utm_term=bottom&amp;utm_content=huozige&amp;utm_campaign=community" target="_blank"><img width="300" height="250" src="./article_files/24442-20170418140643727-710809625.png" alt="Huozige"></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/568303/" target="_blank">易到声明称：不会把用户资金转为乐视会员</a><br> ·  <a href="http://news.cnblogs.com/n/568297/" target="_blank">NASA公布充气温室原型：未来可用于火星探索任务</a><br> ·  <a href="http://news.cnblogs.com/n/568266/" target="_blank">谷歌高管解读财报 VR和AR吸引大众市场还需要一定时间</a><br> ·  <a href="http://news.cnblogs.com/n/568302/" target="_blank">马斯克挖隧道并非玩笑 Boring项目新细节曝光</a><br> ·  <a href="http://news.cnblogs.com/n/568300/" target="_blank">Facebook与垄断的代价</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
 <div id="cnblogs_c2" class="c_ad_block"><a href="http://click.aliyun.com/m/15483/" target="_blank"><img width="468" height="60" src="./article_files/24442-20170331150421570-489464769.jpg" alt="阿里云C2"></a></div>
 <div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/565901/" target="_blank">唱吧DevOps的落地，微服务CI/CD的范本技术解读</a><br> ·  <a href="http://kb.cnblogs.com/page/566523/" target="_blank">程序员，如何从平庸走向理想？</a><br> ·  <a href="http://kb.cnblogs.com/page/566318/" target="_blank">我为什么鼓励工程师写blog</a><br> ·  <a href="http://kb.cnblogs.com/page/566528/" target="_blank">怎么轻松学习JavaScript</a><br> ·  <a href="http://kb.cnblogs.com/page/509431/" target="_blank">如何打好前端游击战</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
 <div id="HistoryToday" class="c_ad_block"></div>
@@ -325,13 +420,14 @@ name就属于给file-loader去用的参数 , 代表打包以后文件的命名�
 <div class="newsItem">
 <h3 class="catListTitle">公告</h3>
 	<div id="blog-news"><!-- ##这里嵌入侧边栏HTML代码(可包含JavaScript)## -->
+
 <div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/programInit/">日月追影俯河山</a><br>园龄：<a href="http://home.cnblogs.com/u/programInit/" title="入园时间：2016-05-04">11个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/programInit/followers/">0</a><br>关注：<a href="http://home.cnblogs.com/u/programInit/followees/">0</a><div id="p_b_follow"></div></div></div><script type="text/javascript">loadBlogNews();</script>
 </div>
 
 			<div id="calendar"><div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar">
 	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
 		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2017/03/01&#39;);return false;">&lt;</a></td><td align="center">2017年4月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2017/05/01&#39;);return false;">&gt;</a></td></tr>
-	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">26</td><td class="CalOtherMonthDay" align="center">27</td><td class="CalOtherMonthDay" align="center">28</td><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td class="CalOtherMonthDay" align="center">31</td><td class="CalWeekendDay" align="center">1</td></tr><tr><td class="CalWeekendDay" align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td class="CalWeekendDay" align="center">8</td></tr><tr><td class="CalWeekendDay" align="center">9</td><td align="center">10</td><td align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td class="CalWeekendDay" align="center">15</td></tr><tr><td class="CalWeekendDay" align="center">16</td><td align="center">17</td><td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td class="CalWeekendDay" align="center">22</td></tr><tr><td class="CalWeekendDay" align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td class="CalTodayDay" align="center">29</td></tr><tr><td class="CalWeekendDay" align="center">30</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">26</td><td class="CalOtherMonthDay" align="center">27</td><td class="CalOtherMonthDay" align="center">28</td><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td class="CalOtherMonthDay" align="center">31</td><td class="CalWeekendDay" align="center">1</td></tr><tr><td class="CalWeekendDay" align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td class="CalWeekendDay" align="center">8</td></tr><tr><td class="CalWeekendDay" align="center">9</td><td align="center">10</td><td align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td class="CalWeekendDay" align="center">15</td></tr><tr><td class="CalWeekendDay" align="center">16</td><td align="center">17</td><td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td class="CalWeekendDay" align="center">22</td></tr><tr><td class="CalWeekendDay" align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td class="CalTodayDay" align="center"><a href="http://www.cnblogs.com/programInit/archive/2017/04/29.html"><u>29</u></a></td></tr><tr><td class="CalWeekendDay" align="center">30</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td></tr>
 </tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
 
 			<div id="leftcontentcontainer">
@@ -340,7 +436,7 @@ name就属于给file-loader去用的参数 , 代表打包以后文件的命名�
 <h3 class="catListTitle">搜索</h3>
 <div id="sidebar_search_box">
 <div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
-<div id="widget_my_google" class="div_my_zzk"><input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk"></div>
+
 </div>
 </div>
 
@@ -365,7 +461,7 @@ name就属于给file-loader去用的参数 , 代表打包以后文件的命名�
 
 <li><a id="CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/programInit/category/942611.html">JavaScript(6)</a> </li>
 
-<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/programInit/category/942604.html">Vue</a> </li>
+<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/programInit/category/993614.html">前端杂烩(3)</a> </li>
 
 </ul>
 
@@ -376,30 +472,17 @@ name就属于给file-loader去用的参数 , 代表打包以后文件的命名�
 
 <ul>
 
-<li><a id="CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/programInit/archive/2017/03.html">2017年3月 (2)</a> </li>
+<li><a id="CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/programInit/archive/2017/04.html">2017年4月 (3)</a> </li>
 
-<li><a id="CatList_LinkList_1_Link_1" href="http://www.cnblogs.com/programInit/archive/2017/02.html">2017年2月 (10)</a> </li>
+<li><a id="CatList_LinkList_1_Link_1" href="http://www.cnblogs.com/programInit/archive/2017/03.html">2017年3月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_2" href="http://www.cnblogs.com/programInit/archive/2017/02.html">2017年2月 (10)</a> </li>
 
 </ul>
 
 </div>
 
-</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap" style="display: none;">
-<div class="catListComment">
-<h3 class="catListTitle">最新评论</h3>
-	<div id="RecentCommentsBlock"></div>
-</div>
-</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
-<div class="catListView">
-<h3 class="catListTitle">阅读排行榜</h3>
-	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/programInit/p/6363115.html">1. 注解开发(24)</a></li><li><a href="http://www.cnblogs.com/programInit/p/6581285.html">2. webpack(2) - 加载器(20)</a></li><li><a href="http://www.cnblogs.com/programInit/p/6363206.html">3. JS当中的观察者模式(14)</a></li><li><a href="http://www.cnblogs.com/programInit/p/6388467.html">4. 浅析Promise(13)</a></li><li><a href="http://www.cnblogs.com/programInit/p/6363146.html">5. 引用类型与垃圾回收(12)</a></li></ul></div>
-</div>
-</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap" style="display: none;">
-<div class="catListFeedback">
-<h3 class="catListTitle">评论排行榜</h3>
-	<div id="TopFeedbackPostsBlock"></div>
-</div>
-</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap" style="display: none;">
+</div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap" style="display: none;">
 <div class="catListView">
 <h3 class="catListTitle">推荐排行榜</h3>
 <div id="TopDiggPostsBlock"></div>
@@ -419,13 +502,14 @@ Copyright ©2017 日月追影俯河山
 </div><!--end: home 自定义的最大容器 -->
 <!--PageEndHtml Block Begin-->
 <!-- ## 这里可以嵌入页脚HTML代码 ## -->
-<div id="scrollBtn">
-    <a href="javascript:void(0);" title="回顶部">
+<div id="scrollBtn" style="display: block;">
+    <a href="javascript:void(0)" title="回顶部">
 	     <div class="trangle"></div>
+       <div class="top-text">TOP</div>
     </a>
 </div>
 <!--PageEndHtml Block End-->
-<script src="./index_files/jquery.scrollTo.js"></script>
+<script src="./index_files/jquery.smooth-scroll.js"></script>
 <script src="./index_files/app.js"></script>
 
 </body></html>

@@ -1,0 +1,136 @@
+@import "./common.scss";
+
+
+//分页工具栏
+.pager {
+  color: black;
+  a {
+    border: 1px solid $base_color;
+    background: $base_color;
+    color: white;
+    &:hover {
+      background: white;
+      color: $base_color;
+    }
+  }
+}
+//摘要
+.c_b_p_desc {
+  line-height: 24px;
+  padding: 10px 20px;
+  color: #888;
+  @include border_radius(12px);
+  background: #f0f0f0 no-repeat;
+  a {
+    color: lighten($base_color, 10%);
+  }
+}
+.day {
+  padding: 0;
+  background: #fff;
+  margin-top: 20px;
+  .postTitle {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      .postTitle2::before {
+        content : "→ "
+      }
+      @extend %a_gradual;
+      a:hover {
+        margin-left: 10px;
+      }
+  }
+  .postDesc {
+    border-bottom: 1px dotted #999;
+    color: #aaa;
+    font-size: 12px;
+    margin: 0 30px 2px;
+    padding: 8px 0;
+    text-align: right
+  }
+  .dayTitle {
+    display: none;
+  }
+}
+
+
+div#blog-comments-placeholder ,
+div#comment_form ,
+div#profile_block ,
+div#BlogPostCategory ,
+div.catList ,
+div.catListBlogRank ,
+div.catListFeedback ,
+div.catListImageCategory ,
+div.catListLink ,
+div.catListPostArchive ,
+div.catListPostCategory ,
+div.catListView  {
+  @extend %a_gradual;
+}
+
+//搜索框
+#google_q, #q {
+  width: 120px;
+  @include border_radius(4px);
+}
+//找找看 按钮
+input.btn_my_zzk {
+  cursor: pointer;
+  vertical-align: middle;
+  color: #fff;
+  display: inline-block;
+	font-size: 14px;
+  position: relative;
+  width: 60px;
+  height: 26px;
+  padding: 1px;
+  border: none;
+  @include border_radius(4px);
+  background: $base_color;
+	&:hover {
+		background: lighten($base_color, 10%) ;
+	}
+}
+/* 返回顶部 按钮 */
+#scrollBtn {
+  position: fixed;
+  right: 15px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 0px 5px 2px rgba(255,255,255,0.7);
+  @include border_radius(25px);
+  > a {
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+    @include border_radius(25px);
+    display: inline-block;
+    -webkit-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+    background-color: $base_color;
+    opacity: .6;
+    filter: alpha(opacity=60);
+    &:hover {
+      opacity: .9;
+      filter: alpha(opacity=90);
+    }
+    > .trangle {
+      width : 0;
+      height : 0;
+      border:10px transparent solid;
+      border-bottom-color: #fff;
+      margin:0 auto;
+    }
+    > .top-text {
+      color: #fff;
+      text-align: center;
+      font-size: 10px;
+      margin-top: 5px;
+    }
+  }
+}

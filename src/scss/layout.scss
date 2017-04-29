@@ -36,8 +36,11 @@
         width: $icon_size;
         display: inline-block;
         @include border_radius($icon_size/2);
-        background: url("../images/portrait.png") no-repeat;
-        background-size: contain;
+        background:{
+          image : url("../images/portrait.png");
+          repeat : no-repeat;
+          size : contain;
+        }
       }
     }
     .subtitle {
@@ -121,9 +124,9 @@
 }
 /* 页脚 */
 #footer {
+  text-align: center;
   font-size: 14px;
   margin-top: 20px;
   padding: 12px;
-  color: #eee;
   background: $base_color;
 }

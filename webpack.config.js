@@ -13,9 +13,7 @@ module.exports = {
       { test: /\.css$/, loaders: ["style-loader","css-loader"]},
       //图片大于20KB的交给file-loader处理, 以 文件名-8位hash.扩展名 命名
       { test: /\.(png|jpg|jpeg|gif)$/, loader: "url-loader" ,query :{limit:20000,name:"[name]-[hash:8].[ext]",publicPath:"../",outputPath:"images/"}},
-
-      //sass-loader?outputStyle=compact
-      { test: /\.scss$/, loaders : ExtractTextPlugin.extract({fallback:"style-loader",use:["css-loader","postcss-loader","sass-loader?outputStyle=compact"]})}
+      { test: /\.scss$/, loaders : ExtractTextPlugin.extract({fallback:"style-loader",use:["css-loader","postcss-loader","sass-loader?outputStyle=compressed"]})}
     ]
   },
   plugins : [

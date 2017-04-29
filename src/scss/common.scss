@@ -1,0 +1,28 @@
+$base_color : #FF6666; //页面主题基准色
+$fonts : ('Microsoft Yahei', Helvetica, Arial);
+
+%a_gradual {
+  //超链接指向时文字颜色渐变动画
+  a {
+    -webkit-transition: color .5s ease;
+    transition: color .5s ease;
+    &:hover {
+      color :$base_color;
+    }
+  }
+}
+%box_gradual {
+  //指向时背景色变浅动画
+  -webkit-transition: background .5s ease,box-shadow .3s ease;
+  transition: background .5s ease,box-shadow .3s ease;
+  &:hover {
+    background: lighten($base_color, 10%);
+    box-shadow: 1px 1px 5px 0px rgba(51, 51, 51, 0.8);
+  }
+}
+//抹角矩形
+@mixin border_radius($radius: 5px) {
+  -webkit-border-radius : $radius;
+  -moz-border-radius : $radius;
+  border-radius: $radius;
+}

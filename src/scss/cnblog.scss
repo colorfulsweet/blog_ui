@@ -1,7 +1,4 @@
-@import "./base.scss";
-@import "./layout.scss";
-// @import "./scroll.scss";
-@import "./nav.scss";
+@import "./common.scss";
 
 /* 返回顶部 按钮 */
 #scrollBtn {
@@ -10,12 +7,12 @@
     bottom: 50px;
     width: 50px;
     height: 50px;
-    border-radius: 25px;
+    @include border_radius(25px);
     > a {
       overflow: hidden;
       height: 50px;
       width: 50px;
-      border-radius: 25px;
+      @include border_radius(25px);
       display: inline-block;
       -webkit-transition: opacity .5s ease;
       transition: opacity .5s ease;
@@ -70,13 +67,6 @@
     background-position: 0 -177px;
 }
 
-
-
-.postBody p, .postCon p {
-    line-height: 24px;
-    margin: 7px 0
-}
-
 .day {
     padding: 0;
     background: #fff;
@@ -115,9 +105,8 @@
     line-height: 24px;
     padding: 10px 20px;
     color: #888;
-    border-radius: 12px;
+    @include border_radius(12px);
     background: #f0f0f0 no-repeat;
-    -ms-border-radius: 10px;
     a {
       color: lighten($base_color, 10%);
     }
@@ -138,14 +127,14 @@
 }
 
 .postCon {
-    padding: 10px 0 0;
+
 }
 
 #div_digg, #footer {
     text-align: center
 }
 
-.btn_my_zzk, .comment_btn {
+.btn_my_zzk {
     cursor: pointer;
     vertical-align: middle;
     color: #fff;
@@ -156,7 +145,7 @@
 
 #google_q, #q {
     width: 120px;
-    border-radius: 4px;
+    @include border_radius(4px);
 }
 
 .btn_my_zzk {
@@ -166,7 +155,7 @@
     height: 26px;
     padding: 1px;
     border: none;
-    border-radius: 4px;
+    @include border_radius(4px);
     background: $base_color;
 }
 
@@ -178,26 +167,13 @@
     margin: 10px 0 0;
     padding: 5px;
     border: 3px solid $base_color;
-    border-radius: 5px
+    @include border_radius();
 }
 
-#btn_comment_submit, .comment_btn {
-    width: 120px;
-    height: 48px;
-    border: none;
-    &:hover {
-        background: lighten($base_color,10%);
-    }
-}
+
 
 #digg_tips {
     display: none
-}
-
-.comment_btn {
-    font-size: 18px;
-    position: relative;
-    background: $base_color;
 }
 
 #commentform_title, .feedback_area_title {
@@ -215,11 +191,11 @@
 
 .feedbackListSubtitle {
     font-size: 12px;
-    color: #888
-}
-
-.feedbackListSubtitle a {
-    color: #888
+    font-weight: 400;
+    color: #888;
+    a {
+      color: #888;
+    }
 }
 
 #commentform_title {
@@ -231,33 +207,8 @@
     background-repeat: no-repeat
 }
 
-#green_channel, .feedbackListSubtitle {
-    font-weight: 400
-}
 
-#comment_form {
-    margin: 10px 0;
-    padding: 0
-}
 
-.commentform {
-    margin: 10px 0;
-    padding: 10px 20px;
-    background: #fff;
-}
-
-#tbCommentBody {
-    font-size: 14px;
-    line-height: 1.42857143;
-    height: 200px;
-    padding: 5px 12px;
-    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    resize: none;
-}
 
 .feedbackItem {
     font-size: 14px;
@@ -273,35 +224,10 @@
     border: 1px solid #e2e1e1;
     border-left-width: 5px;
     border-left-color: $base_color;
-    border-radius: 3px;
+    @include border_radius(3px);
     background-color: #fff
 }
 
-#green_channel {
-    font-size: 15px;
-    width: 920px;
-    padding: 20px;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-}
-
-
-
-kbd {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
-    line-height: 1.4;
-    display: inline-block;
-    margin: 0 .1em;
-    padding: .1em .6em;
-    color: #333;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    background-color: #f7f7f7;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 0 0 2px #fff inset;
-    text-shadow: 0 1px 0 #fff
-}
 
 .headph:hover img {
     -webkit-transform: rotate(360deg) scale(1.5);
@@ -320,7 +246,7 @@ kbd {
     padding: 15px;
     color: #999;
     border: 2px dotted #999;
-    border-radius: 4px
+    @include border_radius(4px);
 }
 
 .First, .Second {
@@ -332,7 +258,7 @@ kbd {
 
 .First, .Second, .Third, .demo {
     clear: both;
-    border-radius: 4px;
+    @include border_radius(4px);
 }
 
 .First {
@@ -393,7 +319,7 @@ div.catListView  {
 //     padding: 1px 3px;
 //     text-decoration: none;
 //     color: #fff;
-//     border-radius: 3px;
+//     @include border_radius(3px);
 //     background-color: $base_color;
 // }
 

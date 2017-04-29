@@ -1,0 +1,59 @@
+@import "./common.scss";
+
+/* 博客文章相关样式 */
+
+.postCon {
+	padding: 10px 0 0;
+	p {
+		line-height: 24px;
+		margin: 7px 0
+	}
+}
+
+//文章正文
+.postBody {
+	p {
+		line-height: 24px;
+    margin: 7px 0;
+	}
+	iframe {
+		//防止容纳图片的iframe越出边间出现横向滚动条
+		max-width : 100%;
+	}
+}
+
+//评论区
+#comment_form {
+  margin: 10px 0;
+	#ad_t2, .c_ad_block {
+		//隐藏广告
+		display: none;
+	}
+	#tbCommentBody {
+    font-size: 14px;
+    line-height: 1.5;
+    height: 200px;
+		width: 92%;
+    padding: 5px 12px;
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    border: 1px solid #ccc;
+    @include border_radius(4px);
+    resize: none;
+		&:focus {
+			border-color: $base_color;
+			box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.15); //内部阴影
+		}
+	}
+	//提交评论 按钮
+	#btn_comment_submit, .comment_btn {
+			font-size: 18px;
+			color : #fff;
+	    position: relative;
+	    background: $base_color;
+	    width: 120px;
+	    height: 36px;
+	    border: none;
+			@extend %box_gradual;
+	}
+}

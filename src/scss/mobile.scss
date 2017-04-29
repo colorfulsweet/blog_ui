@@ -1,24 +1,59 @@
-/* 移动端屏幕样式适配 */
+@import "./common.scss";
 
+/* 移动端屏幕样式适配 */
 @media screen and (max-width: 768px) {
   body {
     background: #fff;
   }
   #home {
     width : 100%;
-    min-width: 400px;
     margin : 0;
     position: static;
     opacity: 1;
     filter: alpha(opacity=100);
-    border-radius:0;
+    @include border_radius(0);
   }
   #header {
+    $icon_size : 30px;
+    $icon_border_width : 1px;
     background: #fff;
+    #blogTitle {
+      padding: 5px 16px 0 16px;
+      .title {
+        //博客标题
+        font-size : 18px;
+        height: ($icon_size + $icon_border_width * 2);
+        &::before {
+          height: $icon_size;
+          width: $icon_size;
+          min-width : $icon_size;
+          @include border_radius($icon_size/2);
+        }
+      }
+      .subtitle {
+        padding-left: 35px;
+      }
+    }
+  }
+  #navigator {
+    .blogStats {
+      display: none;
+    }
+    ul#navList {
+      > #nav_newpost, > #nav_rss {
+        display: none;
+      }
+    }
   }
   #main {
     #sideBar {
+      //在移动端屏幕隐藏侧边栏
       display: none;
     }
+    .topicListFooter > #nav_next_page {
+      //下一页按钮(与回到顶部按钮有重叠)
+      text-align: center;
+    }
   }
+
 }

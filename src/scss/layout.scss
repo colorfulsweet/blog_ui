@@ -1,3 +1,5 @@
+@import "./common.scss";
+
 /* 整体布局结构 */
 #home {
   overflow: auto;
@@ -5,15 +7,15 @@
   width: 95%;
   max-width: 960px;
   margin: 30px auto 5px;
-  border-radius: 20px;
   background: #fff;
   box-shadow: 0 0 10px -4px #4E4E4E;
   opacity: 0.9;
   filter: alpha(opacity=90);
+  @include border_radius(20px);
 }
 
 #header {
-  background: url("../images/header.jpeg") no-repeat;
+  background: url("http://images2015.cnblogs.com/blog/949746/201704/949746-20170428193015990-1022659063.png") no-repeat;
   background-size: contain;
   background-position: right;
   #blogTitle {
@@ -33,7 +35,7 @@
         height: $icon_size;
         width: $icon_size;
         display: inline-block;
-        border-radius: ($icon_size/2);
+        @include border_radius($icon_size/2);
         background: url("../images/portrait.png") no-repeat;
         background-size: contain;
       }
@@ -85,6 +87,7 @@
       background: #fff
     }
   }
+
 }
 /* 页脚 */
 #footer {

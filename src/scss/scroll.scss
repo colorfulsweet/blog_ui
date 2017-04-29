@@ -1,3 +1,5 @@
+@import "./common.scss";
+
 /* 滚动条 */
 ::-webkit-scrollbar {
     width: 10px;
@@ -9,14 +11,14 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 0;
+    @include border_radius(0);
     background-color: $base_color;
     &:hover {
       background-color: lighten($base_color, 10%);
     }
     &:active {
       height: 50px;
-      border-radius: 2px;
+      @include border_radius(2px);
       background-color: darken($base_color, 10%);
     }
 }

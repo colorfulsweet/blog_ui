@@ -1,8 +1,11 @@
-$base_color : #79d5ca; //页面主题基准色
+$base_color : #8f61de; //页面主题基准色
 $dark_gray : #dedede; //深灰色
 $light_gray : #f0f0f0; //浅灰色
 
 $fonts : ('Microsoft Yahei', Helvetica, Arial);
+$perfixs : ("-webkit-", "-moz-", "-o-", ""); // 浏览器内核前缀标识
+
+$container_width : 960px; // 主容器的宽度
 
 %a_gradual {
   //超链接指向时文字颜色渐变动画
@@ -25,9 +28,9 @@ $fonts : ('Microsoft Yahei', Helvetica, Arial);
 }
 //抹角矩形
 @mixin border_radius($radius: 5px) {
-  -webkit-border-radius : $radius;
-  -moz-border-radius : $radius;
-  border-radius: $radius;
+  @each $perfix in $perfixs {
+    #{$perfix}border-radius : $radius;
+  }
 }
 //从上到下的渐变色
 @mixin gradual_change($top_color, $bottom_color) {

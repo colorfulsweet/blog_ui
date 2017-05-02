@@ -1,0 +1,132 @@
+@import "./common.scss";
+
+#top-navigator {
+  $nav_height : 48px;
+  font-size: 16px;
+  background: $base_color;
+  height: $nav_height;
+  box-shadow: 0 -1px 12px -4px #000;
+  width : 100%;
+  position: fixed;
+  top : 0;
+  left : 0;
+  z-index : 100;
+  .nav-container {
+    margin : 0 auto;
+    width : 100%;
+    max-width : $container_width;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      li {
+        flex-grow: 1;
+        line-height: $nav_height;
+        display: inline-block;
+        margin: 0;
+        @extend %box_gradual;
+        a.menu {
+          display: inline-block;
+          width:100%;
+          font-size: 16px;
+          border: 0;
+          line-height: $nav_height;
+          color: #fff;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+}
+
+
+#header {
+  #navigator { //隐藏默认的导航条
+    display : none;
+  }
+  width: 95%;
+  max-width: $container_width;
+  margin : 0 auto;
+  background: url("http://images2015.cnblogs.com/blog/949746/201704/949746-20170428193015990-1022659063.png") #fff no-repeat;
+  background-size: contain;
+  background-position: right;
+  border-bottom: 4px solid $base_color;
+  #blogTitle {
+    $icon_size : 100px;
+    $icon_border_width : 1px;
+    padding: 16px 16px 0 16px;
+    .title {
+      //主标题
+      font-size: 36px;
+      height: ($icon_size + $icon_border_width * 2);
+      display:flex;
+      align-items:center;
+      &::before {
+        //头像
+        border: $icon_border_width solid $base_color;
+        content: "";
+        height: $icon_size;
+        width: $icon_size;
+        display: inline-block;
+        @include border_radius($icon_size/2);
+        background:{
+          image : url("../images/portrait.png");
+          repeat : no-repeat;
+          size : contain;
+        }
+      }
+    }
+    .subtitle {
+      //副标题
+      font-size: 14px;
+      font-weight: 400;
+      margin: 10px 0;
+      padding-left: 105px;
+      color: #999;
+    }
+  }
+}
+
+
+/* 页面默认的导航条 */
+/*
+#navigator {
+  $nav_height : 48px;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background: $base_color;
+  height: $nav_height;
+  box-shadow: 0 -1px 12px -4px #000;
+  .blogStats {
+    //博客状态 随笔 文章 评论 - 数量
+    color: #000;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: rgba(255,255,255,0.7);
+    padding: 5px;
+    @include border_radius();
+  }
+  ul#navList {
+    display: flex;
+    justify-content: space-around;
+    li {
+      flex-grow: 1;
+      line-height: $nav_height;
+      display: inline-block;
+      margin: 0;
+      @extend %box_gradual;
+      a {
+        display: inline-block;
+        width:100%;
+        font-size: 16px;
+        border: 0;
+        line-height: $nav_height;
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
+}
+*/

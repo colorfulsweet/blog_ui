@@ -29,33 +29,32 @@
   padding: 0;
   background: #fff;
   margin-top: 20px;
-  .postTitle {
-      margin: 0;
-      font-size: 20px;
-      font-weight: 700;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #ddd;
-      .postTitle2::before {
-        content : "→ "
-      }
-      @extend %a_gradual;
-      a:hover {
-        margin-left: 10px;
-      }
-  }
-  .postDesc {
-    border-bottom: 1px dotted #999;
-    color: #aaa;
-    font-size: 12px;
-    margin: 0 30px 2px;
-    padding: 8px 0;
-    text-align: right
-  }
   .dayTitle {
-    display: none;
+    color : lighten($base_color, 5%);
+    text-align:right;
   }
 }
 
+.day .postTitle, .entrylistPosttitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  @extend %a_gradual;
+  a:hover {
+    margin-left: 10px;
+  }
+}
+.postDesc, .entrylistItemPostDesc {
+  // posted @ 2017-05-02 20:40 日月追影俯河山 阅读(5) | 评论 (0) 编辑
+  border-bottom: 1px dotted #999;
+  color: #aaa;
+  font-size: 12px;
+  margin: 0 30px 2px;
+  padding: 8px 0;
+  text-align: right;
+}
 
 div#blog-comments-placeholder ,
 div#comment_form ,
@@ -95,6 +94,19 @@ input.btn_my_zzk {
 		background: lighten($base_color, 10%) ;
 	}
 }
+
+//分类搜索之后的主标题
+h1.entrylistTitle, h1.PostListTitle {
+  font-size:24px;
+  text-align: right;
+  text-shadow: 1px 1px 4px lighten($base_color, 10%);
+}
+
+#myposts .PostList {
+  //我的评论
+  @extend %comment;
+}
+
 /* 返回顶部 按钮 */
 #scrollBtn {
   position: fixed;

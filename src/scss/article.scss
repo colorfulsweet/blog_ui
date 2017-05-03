@@ -10,17 +10,26 @@
 	}
 }
 
-//文章正文
-.postBody {
-	p {
-		line-height: 24px;
-    margin: 7px 0;
+
+#topics {
+	.postTitle {
+		//文章标题
+		text-align:center;
+		padding: 5px 0 10px 0;
 	}
-	iframe {
-		//防止容纳图片的iframe越出边间出现横向滚动条
-		max-width : 100%;
+	.postBody {
+		//文章正文
+		p {
+			line-height: 24px;
+	    margin: 7px 0;
+		}
+		iframe {
+			//防止容纳图片的iframe越出边间出现横向滚动条
+			max-width : 100%;
+		}
 	}
 }
+
 
 //评论区
 #comment_form {
@@ -99,10 +108,5 @@
 }
 //评论
 .feedbackItem {
-    font-size: 14px;
-    line-height: 24px;
-    margin: 10px 0;
-    padding: 20px;
-    background: $light_gray;
-    box-shadow: 0 0 5px #aaa
+  @extend %comment;
 }

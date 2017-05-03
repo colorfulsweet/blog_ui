@@ -8,3 +8,4 @@ require("./src/scss/article.scss");
 require("./src/scss/mobile.scss");
 
 // require("./src/scss/others");
+require("./src/css/font-awesome.css");

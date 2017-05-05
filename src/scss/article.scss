@@ -2,6 +2,16 @@
 
 /* 博客文章相关样式 */
 
+//  h4 1.4 h3 1.6 h2 1.8 h1 2.0
+
+#cnblogs_post_body {
+	@for $i from 1 through 6 {
+		h#{$i} {
+			font-size : (2.2em - 0.2em * $i);
+		}
+	}
+}
+
 .postCon {
 	padding: 10px 0 0;
 	p {

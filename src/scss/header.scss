@@ -24,19 +24,45 @@
         display: inline-block;
         margin: 0;
         @extend %box_gradual;
+
         a.menu {
-          display: inline-block;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width:100%;
           font-size: 16px;
           border: 0;
           line-height: $nav_height;
           color: #fff;
           text-align: center;
+          &::before {
+            content : "";
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            background-repeat: no-repeat;
+          }
+        }
+
+        a.cnblog::before {
+          background-image : url("../images/icon/rss.png");
+          background-size:contain;
+        }
+        a.github::before {
+          background-image: url("../images/icon/github.png");
+          background-size:contain;
+        }
+        a.home::before {
+          background-image : url("../images/icon/home.png");
+          background-size:contain;
+        }
+        a.contact::before {
+          background-image : url("../images/icon/email2.png");
+          background-size:contain;
         }
       }
     }
   }
-
 }
 
 

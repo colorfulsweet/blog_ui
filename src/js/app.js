@@ -1,22 +1,20 @@
 $(function() {
-  window.scrollDom = window.scrollDom || {};
-  window.scrollDom.button = document.getElementById("scrollBtn");
-  window.scrollDom.sideBar = document.getElementById("sideBarMain");
+  var _scrollDom = window.scrollDom || {};
+  _scrollDom.button = document.getElementById("scrollBtn");
+  _scrollDom.sideBar = document.getElementById("sideBarMain");
+  _scrollDom.toggleSide = document.getElementById("toggle-side");
+  _scrollDom.isShow = false;
   var scrollCallback = function(e) {
     //控制 回到顶部 浮动按钮的显示与隐藏
     var _scrollTop = document.documentElement.scrollTop + document.body.scrollTop;
-    if(!window.scrollDom.toggleSide) {
-      //由于嵌入的内容是异步加载, 可能初始化的时候无法取到这个对象
-      window.scrollDom.toggleSide = document.getElementById("toggle-side");
-    }
-    if (_scrollTop >= 160) {
-      window.scrollDom.button.style.display = "block";
-      window.scrollDom.sideBar.className = "side-fix";
-      window.scrollDom.toggleSide.style.display = "block";
-    } else {
-      window.scrollDom.button.style.display = "none";
-      window.scrollDom.sideBar.className = "";
-      window.scrollDom.toggleSide.style.display = "none";
+    if (_scrollTop >= 160 && !_scrollDom.isShow) {
+      _scrollDom.button.style.display = "block";
+      _scrollDom.sideBar.className = "side-fix";
+      _scrollDom.toggleSide.style.display = "block";
+    } else if(_scrollDom.isShow) {
+      _scrollDom.button.style.display = "none";
+      _scrollDom.sideBar.className = "";
+      _scrollDom.toggleSide.style.display = "none";
     }
   };
   $(window).on("scroll", scrollCallback);

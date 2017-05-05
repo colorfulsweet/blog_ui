@@ -71,42 +71,41 @@
 /***/ 7:
 /***/ (function(module, exports) {
 
-$(function(){
-  window.scrollDom = {};
+$(function() {
+  window.scrollDom = window.scrollDom || {};
   window.scrollDom.button = document.getElementById("scrollBtn");
-  $(window).on("scroll", function(e) {
+  window.scrollDom.sideBar = document.getElementById("sideBarMain");
+  var scrollCallback = function(e) {
     //控制 回到顶部 浮动按钮的显示与隐藏
     var _scrollTop = document.documentElement.scrollTop + document.body.scrollTop;
-    if (_scrollTop > 100) {
+    if(!window.scrollDom.toggleSide) {
+      //由于嵌入的内容是异步加载, 可能初始化的时候无法取到这个对象
+      window.scrollDom.toggleSide = document.getElementById("toggle-side");
+    }
+    if (_scrollTop >= 160) {
       window.scrollDom.button.style.display = "block";
-    }
-    else {
+      window.scrollDom.sideBar.className = "side-fix";
+      window.scrollDom.toggleSide.style.display = "block";
+    } else {
       window.scrollDom.button.style.display = "none";
+      window.scrollDom.sideBar.className = "";
+      window.scrollDom.toggleSide.style.display = "none";
     }
-    //TODO 头像和博客名称跟随滚动平滑移到顶部导航条
-    /*   头像与主标题都要采用 position:fixed
-    头像
-    原始位置
-    top: 60px;
-    z-index: 150;
-    width: 100px;
-    height: 100px;
-    到位后
-    top: 2px;
-    width: 40px;
-    height: 40px;
+  };
+  $(window).on("scroll", scrollCallback);
+  scrollCallback.call(null);
 
-    博客名称
-    到位后
-    top: 5px;
-    z-index: 150;
-    left: 80px;
-    font-size: 26px;
-    */
-  });
   $("#scrollBtn").on("click",function(){
     $.smoothScroll(0); //滚动至页面顶部
   });
+  $("#toggle-side").on("click", function(){
+    var sideContianer = $("#sideBar");
+    if(sideContianer.is(":hidden")) {
+      sideContianer.show(300);
+    } else {
+      sideContianer.hide(300);
+    }
+  })
 });
 
 

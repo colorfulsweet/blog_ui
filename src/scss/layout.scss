@@ -24,7 +24,7 @@
     padding: 0;
     background: #fff;
     > .forFlow {
-        margin: 0 15px;
+        margin: 0 15px 10px;
     }
   }
   > #sideBar {
@@ -75,9 +75,24 @@
           }
         }
       }
+      #toggle-side {
+        display: none;
+        width: 30px;
+        height: 25px;
+        background: rgba(255, 255, 255, 0.33);
+        position: absolute;
+        top: 20px;
+        right: 0;
+        font-size: 20px;
+        cursor: pointer;
+        @include border_radius();
+      }
+    }
+    > .side-fix {
+      position : fixed;
+      top : 48px;
     }
   }
-
 }
 /* 页脚 */
 #footer {
@@ -85,4 +100,5 @@
   font-size: 14px;
   padding: 12px;
   background: $base_color;
+  position: relative;
 }

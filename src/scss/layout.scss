@@ -75,18 +75,6 @@
           }
         }
       }
-      #toggle-side {
-        display: none;
-        width: 30px;
-        height: 25px;
-        background: rgba(255, 255, 255, 0.33);
-        position: absolute;
-        top: 20px;
-        right: 0;
-        font-size: 20px;
-        cursor: pointer;
-        @include border_radius();
-      }
     }
     > .side-fix {
       position : fixed;

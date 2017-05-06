@@ -63,36 +63,39 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 7:
+/***/ 8:
 /***/ (function(module, exports) {
 
+(function($, global){
+var fileBase = "http://files.cnblogs.com/files/programInit/";
 $(function() {
-  window.scrollDom = window.scrollDom || {};
-  window.scrollDom.button = document.getElementById("scrollBtn");
-  window.scrollDom.sideBar = document.getElementById("sideBarMain");
+  /*-- 滚动相关的动作绑定 --*/
+  var _scrollDom = global.scrollDom || {};
+  _scrollDom.button = global.document.getElementById("scrollBtn");
+  _scrollDom.sideBar = global.document.getElementById("sideBarMain");
+  _scrollDom.toggleSide = global.document.getElementById("toggle-side");
+  _scrollDom.isShow = false;
   var scrollCallback = function(e) {
     //控制 回到顶部 浮动按钮的显示与隐藏
-    var _scrollTop = document.documentElement.scrollTop + document.body.scrollTop;
-    if(!window.scrollDom.toggleSide) {
-      //由于嵌入的内容是异步加载, 可能初始化的时候无法取到这个对象
-      window.scrollDom.toggleSide = document.getElementById("toggle-side");
-    }
-    if (_scrollTop >= 160) {
-      window.scrollDom.button.style.display = "block";
-      window.scrollDom.sideBar.className = "side-fix";
-      window.scrollDom.toggleSide.style.display = "block";
-    } else {
-      window.scrollDom.button.style.display = "none";
-      window.scrollDom.sideBar.className = "";
-      window.scrollDom.toggleSide.style.display = "none";
+    var _scrollTop = global.document.documentElement.scrollTop + global.document.body.scrollTop;
+    if (_scrollTop >= 160 && !_scrollDom.isShow) {
+      _scrollDom.button.style.display = "block";
+      _scrollDom.sideBar.className = "side-fix";
+      _scrollDom.toggleSide.style.display = "block";
+      _scrollDom.isShow = true;
+    } else if(_scrollTop < 160 && _scrollDom.isShow) {
+      _scrollDom.button.style.display = "none";
+      _scrollDom.sideBar.className = "";
+      _scrollDom.toggleSide.style.display = "none";
+      _scrollDom.isShow = false;
     }
   };
-  $(window).on("scroll", scrollCallback);
+  $(global).on("scroll", scrollCallback);
   scrollCallback.call(null);
 
   $("#scrollBtn").on("click",function(){
@@ -107,6 +110,15 @@ $(function() {
     }
   })
 });
+//添加页面LOGO
+(function(filename){
+  var iconLink = global.document.createElement("link");
+  iconLink.setAttribute("rel", "shortcut icon");
+  iconLink.setAttribute("href", fileBase + filename);
+  global.document.querySelector("head").append(iconLink);
+})("LOGO.ico");
+
+})(jQuery, window);
 
 
 /***/ })

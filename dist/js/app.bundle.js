@@ -63,12 +63,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 8:
+/***/ 7:
 /***/ (function(module, exports) {
 
 (function($, global){
@@ -77,21 +77,22 @@ $(function() {
   /*-- 滚动相关的动作绑定 --*/
   var _scrollDom = global.scrollDom || {};
   _scrollDom.button = global.document.getElementById("scrollBtn");
-  _scrollDom.sideBar = global.document.getElementById("sideBarMain");
-  _scrollDom.toggleSide = global.document.getElementById("toggle-side");
   _scrollDom.isShow = false;
+  var _headerHeight = 160; // header部分的高度
+  var getHeaderHeight = function() {
+    _headerHeight = $("#header").height();
+  }
+  $(global).on("resize", getHeaderHeight);
+  getHeaderHeight.call(null);
+
   var scrollCallback = function(e) {
     //控制 回到顶部 浮动按钮的显示与隐藏
     var _scrollTop = global.document.documentElement.scrollTop + global.document.body.scrollTop;
-    if (_scrollTop >= 160 && !_scrollDom.isShow) {
+    if (_scrollTop >= _headerHeight && !_scrollDom.isShow) {
       _scrollDom.button.style.display = "block";
-      _scrollDom.sideBar.className = "side-fix";
-      _scrollDom.toggleSide.style.display = "block";
       _scrollDom.isShow = true;
-    } else if(_scrollTop < 160 && _scrollDom.isShow) {
+    } else if(_scrollTop < _headerHeight && _scrollDom.isShow) {
       _scrollDom.button.style.display = "none";
-      _scrollDom.sideBar.className = "";
-      _scrollDom.toggleSide.style.display = "none";
       _scrollDom.isShow = false;
     }
   };
@@ -101,14 +102,6 @@ $(function() {
   $("#scrollBtn").on("click",function(){
     $.smoothScroll(0); //滚动至页面顶部
   });
-  $("#toggle-side").on("click", function(){
-    var sideContianer = $("#sideBar");
-    if(sideContianer.is(":hidden")) {
-      sideContianer.show(300);
-    } else {
-      sideContianer.hide(300);
-    }
-  })
 });
 //添加页面LOGO
 (function(filename){

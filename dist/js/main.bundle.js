@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -104,12 +104,6 @@
 
 /***/ }),
 /* 6 */
-/***/ (function(module, exports) {
-
-module.exports = "../images/LOGO-04a33b25.ico";
-
-/***/ }),
-/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -122,7 +116,6 @@ __webpack_require__(0);
 __webpack_require__(5);
 
 // require("./src/scss/others");
-__webpack_require__(6)
 
 
 /***/ })

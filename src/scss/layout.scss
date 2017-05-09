@@ -44,10 +44,31 @@
       margin: 0;
       padding: 0 10px 0 0;
       background: #fff;
-      .newsItem > #blog-news, #calendar {
+      .newsItem > #blog-news {
         background-color: $dark_gray;
+        padding : 0 5px 5px 5px;
+        #p_b_follow {
+          //加关注
+          text-align: center;
+          margin: 3px 5px;
+          a, span {
+            //a ->+加关注 , span -> 关注成功
+            background: #dedede;
+            display: block;
+            height: 24px;
+            border: 1px solid #8f61de;
+            border-radius: 15px;
+            line-height: 24px;
+
+          }
+          a:hover {
+            background: lighten($base_color, 10%);
+            color : white;
+          }
+        }
       }
       #calendar {
+        background-color: $dark_gray;
         border : $base_color dotted 1px;
         #blogCalendar a u {
           color: $base_color;

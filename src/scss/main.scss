@@ -24,6 +24,9 @@
   a {
     color: lighten($base_color, 10%);
   }
+  img.desc_img {
+    width : 40%;
+  }
 }
 .day {
   padding: 0;

@@ -19,7 +19,7 @@
   line-height: 24px;
   padding: 10px 20px;
   color: #888;
-  @include border_radius(12px);
+  @include border_radius(8px);
   background: #f0f0f0 no-repeat;
   a {
     color: lighten($base_color, 10%);

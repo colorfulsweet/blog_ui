@@ -1,5 +1,14 @@
 (function($, global){
 var fileBase = "http://files.cnblogs.com/files/programInit/";
+//添加页面LOGO
+(function(filename){
+  var iconLink = global.document.createElement("link");
+  iconLink.setAttribute("rel", "shortcut icon");
+  iconLink.setAttribute("href", fileBase + filename);
+  global.document.querySelector("head").append(iconLink);
+})("LOGO.ico");
+//替换博客公共样式
+$("link[href*='blog-common.css']").remove();
 $(function() {
   /*-- 滚动相关的动作绑定 --*/
   var _scrollDom = global.scrollDom || {};
@@ -30,12 +39,5 @@ $(function() {
     $.smoothScroll(0); //滚动至页面顶部
   });
 });
-//添加页面LOGO
-(function(filename){
-  var iconLink = global.document.createElement("link");
-  iconLink.setAttribute("rel", "shortcut icon");
-  iconLink.setAttribute("href", fileBase + filename);
-  global.document.querySelector("head").append(iconLink);
-})("LOGO.ico");
 
 })(jQuery, window);

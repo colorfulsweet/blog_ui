@@ -33,9 +33,6 @@
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -63,14 +60,27 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+
+__webpack_require__(1);
+__webpack_require__(2);
+__webpack_require__(3);
+__webpack_require__(4);
+// require("./src/scss/scroll.scss");
+__webpack_require__(5);
+__webpack_require__(6);
+
+// require("./src/scss/others");
+
+__webpack_require__(7);
+// require("./src/css/hljs/hopscotch.css");
+__webpack_require__(8);
 
 /***/ }),
 /* 1 */
@@ -104,19 +114,21 @@
 
 /***/ }),
 /* 6 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
+// removed by extract-text-webpack-plugin
 
-__webpack_require__(1);
-__webpack_require__(4);
-__webpack_require__(3);
-__webpack_require__(2);
-// require("./src/scss/scroll.scss");
-__webpack_require__(0);
-__webpack_require__(5);
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
 
-// require("./src/scss/others");
+// removed by extract-text-webpack-plugin
 
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
